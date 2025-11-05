@@ -6,7 +6,7 @@
 /*   By: jmiguele <jmiguele@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 09:37:48 by jmiguele          #+#    #+#             */
-/*   Updated: 2025/11/05 11:56:26 by jmiguele         ###   ########.fr       */
+/*   Updated: 2025/11/05 12:58:55 by jmiguele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ static char	*ft_strdup(const char *src)
 	unsigned char	*dest;
 
 	i = 0;
+	len = 0;
 	while (src[i])
 		len++;
 	dest = (unsigned char *)malloc((len + 1) * sizeof(char));
@@ -43,9 +44,10 @@ static char	*ft_extract_line(char *line, t_list *current)
 	i = 0;
 	while (line[i] != '\n')
 		i++;
-	temp = (char *)malloc(i * sizeof(char *));
+	temp = (char *)malloc(++i * sizeof(char *));
 	ft_strlcpy(temp, line, i);
-	temp[i] = '\0';
+	temp[i] = '\n';
+	temp[i + 1] = '\0';
 	if (line[i + 1])
 	{
 		rest = (char *)malloc(i * sizeof(char *));
@@ -68,6 +70,7 @@ static char	*ft_read_line(int fd, char **line, char *buffer, size_t *bytes_read)
 	temp = ft_strjoin(*line, buffer);
 	free(*line);
 	*line = temp;
+	// if (ft_strchr(buffer, '\n') || ())
 	if (ft_strchr(buffer, '\n'))
 		return (buffer);
 	return (ft_read_line(fd, line, buffer, bytes_read));
@@ -109,7 +112,7 @@ char	*get_next_line(int fd)
 	{
 		line = ft_strjoin(current->line, ft_read_line(fd, &line, buffer,
 					&bytes_read));
-		return (line);
+		return (ft_extract_line(line, current));
 	}
 	else
 	{

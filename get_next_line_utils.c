@@ -6,7 +6,7 @@
 /*   By: jmiguele <jmiguele@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 09:55:58 by jmiguele          #+#    #+#             */
-/*   Updated: 2025/11/05 12:19:16 by jmiguele         ###   ########.fr       */
+/*   Updated: 2025/11/05 12:59:01 by jmiguele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	size_t	len;
 
 	i = 0;
+	len = 0;
 	while (src[i])
 		len++;
 	i = 0;
@@ -75,6 +76,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	dest[i] = '\0';
 	return (len);
 }
+
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
@@ -85,9 +87,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	i = 0;
+	len1 = 0;
 	while (s1[i])
 		len1++;
 	i = 0;
+	len2 = 0;
 	while (s2[i])
 		len2++;
 	str = malloc((len1 + len2 + 1));
