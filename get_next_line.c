@@ -15,14 +15,14 @@
 static char	*ft_strdup(const char *src)
 {
 	size_t			i;
-	size_t			len;
 	unsigned char	*dest;
 
+	if (!src)
+		return (NULL);
 	i = 0;
-	len = 0;
 	while (src[i])
-		len++;
-	dest = (unsigned char *)malloc((len + 1) * sizeof(char));
+		i++;
+	dest = (unsigned char *)malloc((i + 1) * sizeof(char));
 	if (dest == NULL)
 		return (NULL);
 	i = 0;
@@ -38,42 +38,53 @@ static char	*ft_strdup(const char *src)
 static char	*ft_extract_line(char *line, t_list *current)
 {
 	size_t	i;
-	char	*temp;
+	char	*temp_line;
 	char	*rest;
 
 	i = 0;
-	while (line[i] != '\n')
+	while (line[i] != '\n' && line[i] != '\0')
 		i++;
-	temp = (char *)malloc(++i * sizeof(char *));
-	ft_strlcpy(temp, line, i);
-	temp[i] = '\n';
-	temp[i + 1] = '\0';
-	if (line[i + 1])
+    if (line[i] == '\n')
 	{
-		rest = (char *)malloc(i * sizeof(char *));
-		rest = ft_strdup(line + i);
+		temp_line = (char *)malloc(i + 2);
+		if (!temp_line)
+			return (NULL);
+		ft_strlcpy(temp_line, line, i + 2);
+		rest = ft_strdup(line + i + 1);
 	}
 	else
+	{
+		temp_line = ft_strdup(line);
 		rest = NULL;
+	}
 	free(current->line);
 	current->line = rest;
-	return (temp);
+	return (temp_line);
 }
 
-// considerar que hacer cuando acaba el archivo
-static char	*ft_read_line(int fd, char **line, char *buffer, size_t *bytes_read)
+static char	*ft_read_line(int fd, char *line, char *buffer, ssize_t *bytes_read)
 {
-	char	*temp;
+    char    *temp_line;
 
-	*bytes_read = read(fd, buffer, BUFFER_SIZE);
-	buffer[*bytes_read] = '\0';
-	temp = ft_strjoin(*line, buffer);
-	free(*line);
-	*line = temp;
-	// if (ft_strchr(buffer, '\n') || ())
-	if (ft_strchr(buffer, '\n'))
-		return (buffer);
-	return (ft_read_line(fd, line, buffer, bytes_read));
+	while (1)
+	{
+		*bytes_read = read(fd, buffer, BUFFER_SIZE);
+		if (*bytes_read < 0)
+            return (free(line), NULL);
+		if (*bytes_read == 0)
+			break;
+		buffer[*bytes_read] = '\0';
+		temp_line = ft_strjoin(line, buffer);
+		if (!temp_line)
+			return (free(line), NULL);
+		free(line);
+		line = temp_line;
+		if (ft_strchr(line, '\n'))
+			break;
+	}
+	if (*bytes_read == 0 && (!line || *line == '\0'))
+        return (free(line), NULL);
+	return (line);
 }
 
 char	*get_next_line(int fd)
@@ -81,7 +92,7 @@ char	*get_next_line(int fd)
 	static t_list	*list;
 	t_list			*current;
 	char			buffer[BUFFER_SIZE + 1];
-	size_t			bytes_read;
+	ssize_t			bytes_read = -1;
 	char			*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
@@ -106,17 +117,21 @@ char	*get_next_line(int fd)
 		line = current->line;
 		current->line = NULL;
 	}
+    buffer[0] = '\0';
 	if (line && ft_strchr(line, '\n'))
 		return (ft_extract_line(line, current));
 	else if (line)
 	{
-		line = ft_strjoin(current->line, ft_read_line(fd, &line, buffer,
-					&bytes_read));
+		line = ft_read_line(fd, line, buffer, &bytes_read);
+        if (!line)
+            return (NULL);
 		return (ft_extract_line(line, current));
 	}
 	else
 	{
-		line = ft_read_line(fd, &line, buffer, &bytes_read);
+		line = ft_read_line(fd, line, buffer, &bytes_read);
+		if (!line)
+            return (NULL);
 		return (ft_extract_line(line, current));
 	}
 }
