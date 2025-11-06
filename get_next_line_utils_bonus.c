@@ -30,34 +30,6 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-t_list	*ft_lstnew(int fd)
-{
-	t_list	*list;
-
-	list = malloc(sizeof(t_list));
-	if (!list)
-		return (NULL);
-	list->fd = fd;
-	list->line = (NULL);
-	list->next = (NULL);
-	return (list);
-}
-
-void	ft_lstadd_back(t_list **lst, t_list *new)
-{
-	t_list	*last;
-
-	if (*lst == (NULL))
-		*lst = new;
-	else
-	{
-		last = *lst;
-		while (last->next != (NULL))
-			last = last->next;
-		last->next = new;
-	}
-}
-
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
