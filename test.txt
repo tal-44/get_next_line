@@ -1,0 +1,7 @@
+	line = ft_strdup(temp_line);	line = ft_strdup(temp_line);	line = ft_strdup(temp_line);
+fsffsd
+sdf
+af
+sd
+fd
+sfsdf

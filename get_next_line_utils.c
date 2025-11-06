@@ -6,7 +6,7 @@
 /*   By: jmiguele <jmiguele@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 09:55:58 by jmiguele          #+#    #+#             */
-/*   Updated: 2025/11/05 12:59:01 by jmiguele         ###   ########.fr       */
+/*   Updated: 2025/11/06 12:48:36 by jmiguele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 char	*ft_strchr(const char *s, int c)
 {
 	size_t	i;
-
 
 	if (!s)
 		return (NULL);
@@ -31,45 +30,17 @@ char	*ft_strchr(const char *s, int c)
 	return (NULL);
 }
 
-t_list	*ft_lstnew(int fd)
-{
-	t_list	*list;
-
-	list = malloc(sizeof(t_list));
-	if (!list)
-		return (NULL);
-	list->fd = fd;
-	list->line = (NULL);
-	list->next = (NULL);
-	return (list);
-}
-
-void	ft_lstadd_back(t_list **lst, t_list *new)
-{
-	t_list	*last;
-
-	if (*lst == (NULL))
-		*lst = new;
-	else
-	{
-		last = *lst;
-		while (last->next != (NULL))
-			last = last->next;
-		last->next = new;
-	}
-}
-
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	len;
 
-    if (!src)
-    {
-        if (size > 0)
-            dest[0] = '\0';
-        return (0);
-    }
+	if (!src)
+	{
+		if (size > 0)
+			dest[0] = '\0';
+		return (0);
+	}
 	len = 0;
 	while (src[len])
 		len++;
@@ -88,7 +59,6 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
-	size_t	i;
 	size_t	len1;
 	size_t	len2;
 
