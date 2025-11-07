@@ -1,6 +1,3 @@
-	line = ft_strdup(temp_line);	line = ft_strdup(temp_line);	line = ft_strdup(temp_line);
-
-
 ℹ Running tests: gnlTester (https://github.com/Tripouille/gnlTester)
 [Mandatory]
 [BUFFER_SIZE = 1]: 
