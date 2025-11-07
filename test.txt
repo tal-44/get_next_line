@@ -1,7 +1,2561 @@
 	line = ft_strdup(temp_line);	line = ft_strdup(temp_line);	line = ft_strdup(temp_line);
-fsffsd
-sdf
-af
-sd
-fd
-sfsdf
+
+
+ℹ Running tests: gnlTester (https://github.com/Tripouille/gnlTester)
+[Mandatory]
+[BUFFER_SIZE = 1]: 
+Invalid fd: 1.OK 2.OK 3.OK 
+files/empty: 1.OK 2.KO 
+==1591478== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591478==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591478==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591478==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591478==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591478==    by 0x405075: main (mandatory.cpp:35)
+==1591478== 
+files/nl: 1.OK 2.KO 
+==1591479== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591479==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591479==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591479==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591479==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591479==    by 0x405360: main (mandatory.cpp:40)
+==1591479== 
+files/41_no_nl: 1.OK 2.OK 
+files/41_with_nl: 1.OK 2.OK 3.OK 
+==1591481== 1 bytes in 1 blocks are definitely lost in loss record 1 of 3
+==1591481==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591481==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591481==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591481==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591481==    by 0x40593C: main (mandatory.cpp:50)
+==1591481== 
+==1591481== 2 bytes in 1 blocks are definitely lost in loss record 3 of 3
+==1591481==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591481==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591481==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591481==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591481==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591481==    by 0x40593C: main (mandatory.cpp:50)
+==1591481== 
+files/42_no_nl: 1.OK 2.OK 
+files/42_with_nl: 1.OK 2.OK 3.OK 
+==1591483== 1 bytes in 1 blocks are definitely lost in loss record 1 of 3
+==1591483==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591483==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591483==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591483==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591483==    by 0x405F24: main (mandatory.cpp:61)
+==1591483== 
+==1591483== 2 bytes in 1 blocks are definitely lost in loss record 3 of 3
+==1591483==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591483==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591483==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591483==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591483==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591483==    by 0x405F24: main (mandatory.cpp:61)
+==1591483== 
+files/43_no_nl: 1.OK 2.OK 
+files/43_with_nl: 1.OK 2.OK 3.OK 
+==1591485== 1 bytes in 1 blocks are definitely lost in loss record 1 of 3
+==1591485==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591485==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591485==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591485==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591485==    by 0x406516: main (mandatory.cpp:77)
+==1591485== 
+==1591485== 2 bytes in 1 blocks are definitely lost in loss record 3 of 3
+==1591485==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591485==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591485==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591485==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591485==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591485==    by 0x406516: main (mandatory.cpp:77)
+==1591485== 
+files/multiple_nlx5: 1.OK 2.OK 3.OK 4.OK 5.OK 6.KO 
+==1591486== 1 bytes in 1 blocks are definitely lost in loss record 1 of 9
+==1591486==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591486==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591486==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591486==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591486==    by 0x406813: main (mandatory.cpp:83)
+==1591486== 
+==1591486== 1 bytes in 1 blocks are definitely lost in loss record 2 of 9
+==1591486==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591486==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591486==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591486==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591486==    by 0x406825: main (mandatory.cpp:83)
+==1591486== 
+==1591486== 1 bytes in 1 blocks are definitely lost in loss record 3 of 9
+==1591486==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591486==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591486==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591486==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591486==    by 0x406837: main (mandatory.cpp:83)
+==1591486== 
+==1591486== 1 bytes in 1 blocks are definitely lost in loss record 4 of 9
+==1591486==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591486==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591486==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591486==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591486==    by 0x406849: main (mandatory.cpp:83)
+==1591486== 
+==1591486== 1 bytes in 1 blocks are definitely lost in loss record 5 of 9
+==1591486==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591486==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591486==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591486==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591486==    by 0x406855: main (mandatory.cpp:83)
+==1591486== 
+==1591486== 2 bytes in 1 blocks are definitely lost in loss record 6 of 9
+==1591486==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591486==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591486==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591486==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591486==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591486==    by 0x406813: main (mandatory.cpp:83)
+==1591486== 
+==1591486== 2 bytes in 1 blocks are definitely lost in loss record 7 of 9
+==1591486==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591486==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591486==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591486==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591486==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591486==    by 0x406825: main (mandatory.cpp:83)
+==1591486== 
+==1591486== 2 bytes in 1 blocks are definitely lost in loss record 8 of 9
+==1591486==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591486==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591486==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591486==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591486==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591486==    by 0x406837: main (mandatory.cpp:83)
+==1591486== 
+==1591486== 2 bytes in 1 blocks are definitely lost in loss record 9 of 9
+==1591486==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591486==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591486==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591486==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591486==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591486==    by 0x406849: main (mandatory.cpp:83)
+==1591486== 
+files/multiple_line_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
+==1591487== 1 bytes in 1 blocks are definitely lost in loss record 1 of 9
+==1591487==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591487==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591487==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591487==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591487==    by 0x406B46: main (mandatory.cpp:92)
+==1591487== 
+==1591487== 1 bytes in 1 blocks are definitely lost in loss record 2 of 9
+==1591487==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591487==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591487==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591487==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591487==    by 0x406B58: main (mandatory.cpp:92)
+==1591487== 
+==1591487== 1 bytes in 1 blocks are definitely lost in loss record 3 of 9
+==1591487==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591487==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591487==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591487==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591487==    by 0x406B6A: main (mandatory.cpp:92)
+==1591487== 
+==1591487== 1 bytes in 1 blocks are definitely lost in loss record 4 of 9
+==1591487==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591487==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591487==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591487==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591487==    by 0x406B7C: main (mandatory.cpp:92)
+==1591487== 
+==1591487== 42 bytes in 1 blocks are definitely lost in loss record 6 of 9
+==1591487==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591487==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591487==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591487==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591487==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591487==    by 0x406B7C: main (mandatory.cpp:92)
+==1591487== 
+==1591487== 44 bytes in 1 blocks are definitely lost in loss record 7 of 9
+==1591487==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591487==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591487==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591487==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591487==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591487==    by 0x406B46: main (mandatory.cpp:92)
+==1591487== 
+==1591487== 44 bytes in 1 blocks are definitely lost in loss record 8 of 9
+==1591487==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591487==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591487==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591487==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591487==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591487==    by 0x406B6A: main (mandatory.cpp:92)
+==1591487== 
+==1591487== 45 bytes in 1 blocks are definitely lost in loss record 9 of 9
+==1591487==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591487==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591487==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591487==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591487==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591487==    by 0x406B58: main (mandatory.cpp:92)
+==1591487== 
+files/multiple_line_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.KO 
+==1591488== 1 bytes in 1 blocks are definitely lost in loss record 1 of 9
+==1591488==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591488==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591488==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591488==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591488==    by 0x406E79: main (mandatory.cpp:101)
+==1591488== 
+==1591488== 1 bytes in 1 blocks are definitely lost in loss record 2 of 9
+==1591488==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591488==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591488==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591488==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591488==    by 0x406E8B: main (mandatory.cpp:101)
+==1591488== 
+==1591488== 1 bytes in 1 blocks are definitely lost in loss record 3 of 9
+==1591488==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591488==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591488==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591488==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591488==    by 0x406E9D: main (mandatory.cpp:101)
+==1591488== 
+==1591488== 1 bytes in 1 blocks are definitely lost in loss record 4 of 9
+==1591488==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591488==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591488==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591488==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591488==    by 0x406EAF: main (mandatory.cpp:101)
+==1591488== 
+==1591488== 1 bytes in 1 blocks are definitely lost in loss record 5 of 9
+==1591488==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591488==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591488==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591488==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591488==    by 0x406EBB: main (mandatory.cpp:101)
+==1591488== 
+==1591488== 42 bytes in 1 blocks are definitely lost in loss record 6 of 9
+==1591488==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591488==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591488==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591488==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591488==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591488==    by 0x406EAF: main (mandatory.cpp:101)
+==1591488== 
+==1591488== 43 bytes in 1 blocks are definitely lost in loss record 7 of 9
+==1591488==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591488==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591488==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591488==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591488==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591488==    by 0x406E79: main (mandatory.cpp:101)
+==1591488== 
+==1591488== 43 bytes in 1 blocks are definitely lost in loss record 8 of 9
+==1591488==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591488==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591488==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591488==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591488==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591488==    by 0x406E9D: main (mandatory.cpp:101)
+==1591488== 
+==1591488== 44 bytes in 1 blocks are definitely lost in loss record 9 of 9
+==1591488==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591488==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591488==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591488==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591488==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591488==    by 0x406E8B: main (mandatory.cpp:101)
+==1591488== 
+files/alternate_line_nl_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+==1591489== 1 bytes in 1 blocks are definitely lost in loss record 1 of 17
+==1591489==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591489==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591489==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591489==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591489==    by 0x4071AC: main (mandatory.cpp:110)
+==1591489== 
+==1591489== 1 bytes in 1 blocks are definitely lost in loss record 2 of 17
+==1591489==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591489==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591489==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591489==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591489==    by 0x4071BE: main (mandatory.cpp:110)
+==1591489== 
+==1591489== 1 bytes in 1 blocks are definitely lost in loss record 3 of 17
+==1591489==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591489==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591489==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591489==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591489==    by 0x4071D0: main (mandatory.cpp:110)
+==1591489== 
+==1591489== 1 bytes in 1 blocks are definitely lost in loss record 4 of 17
+==1591489==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591489==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591489==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591489==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591489==    by 0x4071E2: main (mandatory.cpp:110)
+==1591489== 
+==1591489== 1 bytes in 1 blocks are definitely lost in loss record 5 of 17
+==1591489==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591489==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591489==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591489==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591489==    by 0x4071F4: main (mandatory.cpp:110)
+==1591489== 
+==1591489== 1 bytes in 1 blocks are definitely lost in loss record 6 of 17
+==1591489==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591489==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591489==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591489==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591489==    by 0x407206: main (mandatory.cpp:110)
+==1591489== 
+==1591489== 1 bytes in 1 blocks are definitely lost in loss record 7 of 17
+==1591489==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591489==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591489==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591489==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591489==    by 0x407218: main (mandatory.cpp:110)
+==1591489== 
+==1591489== 1 bytes in 1 blocks are definitely lost in loss record 8 of 17
+==1591489==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591489==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591489==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591489==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591489==    by 0x40722A: main (mandatory.cpp:110)
+==1591489== 
+==1591489== 2 bytes in 1 blocks are definitely lost in loss record 10 of 17
+==1591489==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591489==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591489==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591489==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591489==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591489==    by 0x4071AC: main (mandatory.cpp:110)
+==1591489== 
+==1591489== 2 bytes in 1 blocks are definitely lost in loss record 11 of 17
+==1591489==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591489==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591489==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591489==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591489==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591489==    by 0x4071D0: main (mandatory.cpp:110)
+==1591489== 
+==1591489== 2 bytes in 1 blocks are definitely lost in loss record 12 of 17
+==1591489==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591489==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591489==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591489==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591489==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591489==    by 0x4071F4: main (mandatory.cpp:110)
+==1591489== 
+==1591489== 2 bytes in 1 blocks are definitely lost in loss record 13 of 17
+==1591489==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591489==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591489==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591489==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591489==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591489==    by 0x407218: main (mandatory.cpp:110)
+==1591489== 
+==1591489== 42 bytes in 1 blocks are definitely lost in loss record 14 of 17
+==1591489==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591489==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591489==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591489==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591489==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591489==    by 0x40722A: main (mandatory.cpp:110)
+==1591489== 
+==1591489== 44 bytes in 1 blocks are definitely lost in loss record 15 of 17
+==1591489==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591489==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591489==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591489==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591489==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591489==    by 0x4071BE: main (mandatory.cpp:110)
+==1591489== 
+==1591489== 44 bytes in 1 blocks are definitely lost in loss record 16 of 17
+==1591489==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591489==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591489==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591489==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591489==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591489==    by 0x407206: main (mandatory.cpp:110)
+==1591489== 
+==1591489== 45 bytes in 1 blocks are definitely lost in loss record 17 of 17
+==1591489==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591489==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591489==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591489==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591489==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591489==    by 0x4071E2: main (mandatory.cpp:110)
+==1591489== 
+files/alternate_line_nl_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.KO 
+==1591490== 1 bytes in 1 blocks are definitely lost in loss record 1 of 17
+==1591490==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591490==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591490==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591490==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591490==    by 0x407527: main (mandatory.cpp:123)
+==1591490== 
+==1591490== 1 bytes in 1 blocks are definitely lost in loss record 2 of 17
+==1591490==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591490==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591490==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591490==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591490==    by 0x407539: main (mandatory.cpp:123)
+==1591490== 
+==1591490== 1 bytes in 1 blocks are definitely lost in loss record 3 of 17
+==1591490==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591490==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591490==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591490==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591490==    by 0x40754B: main (mandatory.cpp:123)
+==1591490== 
+==1591490== 1 bytes in 1 blocks are definitely lost in loss record 4 of 17
+==1591490==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591490==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591490==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591490==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591490==    by 0x40755D: main (mandatory.cpp:123)
+==1591490== 
+==1591490== 1 bytes in 1 blocks are definitely lost in loss record 5 of 17
+==1591490==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591490==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591490==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591490==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591490==    by 0x40756F: main (mandatory.cpp:123)
+==1591490== 
+==1591490== 1 bytes in 1 blocks are definitely lost in loss record 6 of 17
+==1591490==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591490==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591490==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591490==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591490==    by 0x407581: main (mandatory.cpp:123)
+==1591490== 
+==1591490== 1 bytes in 1 blocks are definitely lost in loss record 7 of 17
+==1591490==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591490==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591490==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591490==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591490==    by 0x407593: main (mandatory.cpp:123)
+==1591490== 
+==1591490== 1 bytes in 1 blocks are definitely lost in loss record 8 of 17
+==1591490==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591490==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591490==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591490==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591490==    by 0x4075A5: main (mandatory.cpp:123)
+==1591490== 
+==1591490== 1 bytes in 1 blocks are definitely lost in loss record 9 of 17
+==1591490==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591490==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591490==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591490==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591490==    by 0x4075B1: main (mandatory.cpp:123)
+==1591490== 
+==1591490== 2 bytes in 1 blocks are definitely lost in loss record 10 of 17
+==1591490==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591490==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591490==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591490==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591490==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591490==    by 0x407527: main (mandatory.cpp:123)
+==1591490== 
+==1591490== 2 bytes in 1 blocks are definitely lost in loss record 11 of 17
+==1591490==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591490==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591490==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591490==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591490==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591490==    by 0x40754B: main (mandatory.cpp:123)
+==1591490== 
+==1591490== 2 bytes in 1 blocks are definitely lost in loss record 12 of 17
+==1591490==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591490==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591490==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591490==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591490==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591490==    by 0x40756F: main (mandatory.cpp:123)
+==1591490== 
+==1591490== 2 bytes in 1 blocks are definitely lost in loss record 13 of 17
+==1591490==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591490==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591490==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591490==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591490==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591490==    by 0x407593: main (mandatory.cpp:123)
+==1591490== 
+==1591490== 43 bytes in 1 blocks are definitely lost in loss record 14 of 17
+==1591490==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591490==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591490==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591490==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591490==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591490==    by 0x4075A5: main (mandatory.cpp:123)
+==1591490== 
+==1591490== 44 bytes in 1 blocks are definitely lost in loss record 15 of 17
+==1591490==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591490==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591490==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591490==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591490==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591490==    by 0x407539: main (mandatory.cpp:123)
+==1591490== 
+==1591490== 44 bytes in 1 blocks are definitely lost in loss record 16 of 17
+==1591490==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591490==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591490==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591490==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591490==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591490==    by 0x407581: main (mandatory.cpp:123)
+==1591490== 
+==1591490== 45 bytes in 1 blocks are definitely lost in loss record 17 of 17
+==1591490==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591490==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591490==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591490==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591490==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591490==    by 0x40755D: main (mandatory.cpp:123)
+==1591490== 
+files/big_line_no_nl: 1.OK 2.OK 
+files/big_line_with_nl: 1.OK 2.KO 
+==1591492== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591492==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591492==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591492==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591492==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591492==    by 0x407B87: main (mandatory.cpp:140)
+==1591492== 
+stdin: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.KO 
+==1591493== 1 bytes in 1 blocks are definitely lost in loss record 1 of 17
+==1591493==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591493==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591493==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591493==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591493==    by 0x407E76: main (mandatory.cpp:145)
+==1591493== 
+==1591493== 1 bytes in 1 blocks are definitely lost in loss record 2 of 17
+==1591493==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591493==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591493==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591493==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591493==    by 0x407E87: main (mandatory.cpp:145)
+==1591493== 
+==1591493== 1 bytes in 1 blocks are definitely lost in loss record 3 of 17
+==1591493==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591493==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591493==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591493==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591493==    by 0x407E98: main (mandatory.cpp:145)
+==1591493== 
+==1591493== 1 bytes in 1 blocks are definitely lost in loss record 4 of 17
+==1591493==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591493==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591493==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591493==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591493==    by 0x407EA9: main (mandatory.cpp:145)
+==1591493== 
+==1591493== 1 bytes in 1 blocks are definitely lost in loss record 5 of 17
+==1591493==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591493==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591493==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591493==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591493==    by 0x407EBA: main (mandatory.cpp:145)
+==1591493== 
+==1591493== 1 bytes in 1 blocks are definitely lost in loss record 6 of 17
+==1591493==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591493==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591493==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591493==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591493==    by 0x407ECB: main (mandatory.cpp:145)
+==1591493== 
+==1591493== 1 bytes in 1 blocks are definitely lost in loss record 7 of 17
+==1591493==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591493==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591493==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591493==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591493==    by 0x407EDC: main (mandatory.cpp:145)
+==1591493== 
+==1591493== 1 bytes in 1 blocks are definitely lost in loss record 8 of 17
+==1591493==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591493==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591493==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591493==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591493==    by 0x407EED: main (mandatory.cpp:145)
+==1591493== 
+==1591493== 1 bytes in 1 blocks are definitely lost in loss record 9 of 17
+==1591493==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591493==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591493==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591493==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591493==    by 0x407EF8: main (mandatory.cpp:145)
+==1591493== 
+==1591493== 2 bytes in 1 blocks are definitely lost in loss record 10 of 17
+==1591493==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591493==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591493==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591493==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591493==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591493==    by 0x407E76: main (mandatory.cpp:145)
+==1591493== 
+==1591493== 2 bytes in 1 blocks are definitely lost in loss record 11 of 17
+==1591493==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591493==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591493==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591493==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591493==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591493==    by 0x407E98: main (mandatory.cpp:145)
+==1591493== 
+==1591493== 2 bytes in 1 blocks are definitely lost in loss record 12 of 17
+==1591493==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591493==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591493==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591493==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591493==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591493==    by 0x407EBA: main (mandatory.cpp:145)
+==1591493== 
+==1591493== 2 bytes in 1 blocks are definitely lost in loss record 13 of 17
+==1591493==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591493==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591493==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591493==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591493==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591493==    by 0x407EDC: main (mandatory.cpp:145)
+==1591493== 
+==1591493== 43 bytes in 1 blocks are definitely lost in loss record 14 of 17
+==1591493==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591493==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591493==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591493==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591493==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591493==    by 0x407EED: main (mandatory.cpp:145)
+==1591493== 
+==1591493== 44 bytes in 1 blocks are definitely lost in loss record 15 of 17
+==1591493==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591493==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591493==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591493==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591493==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591493==    by 0x407E87: main (mandatory.cpp:145)
+==1591493== 
+==1591493== 44 bytes in 1 blocks are definitely lost in loss record 16 of 17
+==1591493==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591493==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591493==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591493==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591493==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591493==    by 0x407ECB: main (mandatory.cpp:145)
+==1591493== 
+==1591493== 45 bytes in 1 blocks are definitely lost in loss record 17 of 17
+==1591493==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591493==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591493==    by 0x4083CF: ft_read_line (get_next_line.c:96)
+==1591493==    by 0x4085CD: get_next_line (get_next_line.c:128)
+==1591493==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591493==    by 0x407EA9: main (mandatory.cpp:145)
+==1591493== 
+
+[BUFFER_SIZE = 42]: 
+Invalid fd: 1.OK 2.OK 3.OK 
+files/empty: 1.OK 2.KO 
+==1591510== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591510==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591510==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591510==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591510==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591510==    by 0x405075: main (mandatory.cpp:35)
+==1591510== 
+files/nl: 1.OK 2.KO 
+==1591511== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591511==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591511==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591511==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591511==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591511==    by 0x405360: main (mandatory.cpp:40)
+==1591511== 
+files/41_no_nl: 1.OK 2.OK 
+files/41_with_nl: 1.OK 2.OK 3.OK 
+==1591513== 2 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==1591513==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591513==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591513==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591513==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591513==    by 0x40593C: main (mandatory.cpp:50)
+==1591513== 
+files/42_no_nl: 1.OK 2.OK 
+files/42_with_nl: 1.OK 2.OK 3.KO 
+==1591515== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591515==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591515==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591515==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591515==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591515==    by 0x405F62: main (mandatory.cpp:61)
+==1591515== 
+files/43_no_nl: 1.OK 2.OK 
+files/43_with_nl: 1.OK 2.OK 3.OK 
+==1591517== 2 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==1591517==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591517==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591517==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591517==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591517==    by 0x406548: main (mandatory.cpp:77)
+==1591517== 
+files/multiple_nlx5: 1.OK 2.OK 3.OK 4.OK 5.OK 6.KO 
+==1591518== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591518==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591518==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591518==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591518==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591518==    by 0x406887: main (mandatory.cpp:83)
+==1591518== 
+files/multiple_line_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
+==1591519== 1 bytes in 1 blocks are definitely lost in loss record 1 of 9
+==1591519==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591519==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591519==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591519==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591519==    by 0x406B78: main (mandatory.cpp:92)
+==1591519== 
+==1591519== 4 bytes in 1 blocks are definitely lost in loss record 2 of 9
+==1591519==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591519==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591519==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591519==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591519==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591519==    by 0x406BAE: main (mandatory.cpp:92)
+==1591519== 
+==1591519== 39 bytes in 1 blocks are definitely lost in loss record 3 of 9
+==1591519==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591519==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591519==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591519==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591519==    by 0x406BAE: main (mandatory.cpp:92)
+==1591519== 
+==1591519== 40 bytes in 1 blocks are definitely lost in loss record 4 of 9
+==1591519==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591519==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591519==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591519==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591519==    by 0x406B9C: main (mandatory.cpp:92)
+==1591519== 
+==1591519== 42 bytes in 1 blocks are definitely lost in loss record 5 of 9
+==1591519==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591519==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591519==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591519==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591519==    by 0x406B8A: main (mandatory.cpp:92)
+==1591519== 
+==1591519== 43 bytes in 1 blocks are definitely lost in loss record 7 of 9
+==1591519==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591519==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591519==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591519==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591519==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591519==    by 0x406B8A: main (mandatory.cpp:92)
+==1591519== 
+==1591519== 43 bytes in 1 blocks are definitely lost in loss record 8 of 9
+==1591519==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591519==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591519==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591519==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591519==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591519==    by 0x406B9C: main (mandatory.cpp:92)
+==1591519== 
+==1591519== 85 bytes in 1 blocks are definitely lost in loss record 9 of 9
+==1591519==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591519==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591519==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591519==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591519==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591519==    by 0x406B78: main (mandatory.cpp:92)
+==1591519== 
+files/multiple_line_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.KO 
+==1591520== 1 bytes in 1 blocks are definitely lost in loss record 1 of 9
+==1591520==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591520==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591520==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591520==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591520==    by 0x406ECF: main (mandatory.cpp:101)
+==1591520== 
+==1591520== 1 bytes in 1 blocks are definitely lost in loss record 2 of 9
+==1591520==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591520==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591520==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591520==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591520==    by 0x406EE1: main (mandatory.cpp:101)
+==1591520== 
+==1591520== 1 bytes in 1 blocks are definitely lost in loss record 3 of 9
+==1591520==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591520==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591520==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591520==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591520==    by 0x406EED: main (mandatory.cpp:101)
+==1591520== 
+==1591520== 2 bytes in 1 blocks are definitely lost in loss record 4 of 9
+==1591520==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591520==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591520==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591520==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591520==    by 0x406EAB: main (mandatory.cpp:101)
+==1591520== 
+==1591520== 2 bytes in 1 blocks are definitely lost in loss record 5 of 9
+==1591520==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591520==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591520==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591520==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591520==    by 0x406EBD: main (mandatory.cpp:101)
+==1591520== 
+==1591520== 42 bytes in 1 blocks are definitely lost in loss record 6 of 9
+==1591520==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591520==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591520==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591520==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591520==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591520==    by 0x406EE1: main (mandatory.cpp:101)
+==1591520== 
+==1591520== 43 bytes in 1 blocks are definitely lost in loss record 7 of 9
+==1591520==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591520==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591520==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591520==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591520==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591520==    by 0x406EAB: main (mandatory.cpp:101)
+==1591520== 
+==1591520== 43 bytes in 1 blocks are definitely lost in loss record 8 of 9
+==1591520==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591520==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591520==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591520==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591520==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591520==    by 0x406EBD: main (mandatory.cpp:101)
+==1591520== 
+==1591520== 43 bytes in 1 blocks are definitely lost in loss record 9 of 9
+==1591520==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591520==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591520==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591520==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591520==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591520==    by 0x406ECF: main (mandatory.cpp:101)
+==1591520== 
+files/alternate_line_nl_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+==1591521== 1 bytes in 1 blocks are definitely lost in loss record 1 of 11
+==1591521==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591521==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591521==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591521==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591521==    by 0x4071DE: main (mandatory.cpp:110)
+==1591521== 
+==1591521== 8 bytes in 1 blocks are definitely lost in loss record 2 of 11
+==1591521==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591521==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591521==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591521==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591521==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591521==    by 0x40725C: main (mandatory.cpp:110)
+==1591521== 
+==1591521== 35 bytes in 1 blocks are definitely lost in loss record 3 of 11
+==1591521==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591521==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591521==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591521==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591521==    by 0x40725C: main (mandatory.cpp:110)
+==1591521== 
+==1591521== 37 bytes in 1 blocks are definitely lost in loss record 4 of 11
+==1591521==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591521==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591521==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591521==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591521==    by 0x407238: main (mandatory.cpp:110)
+==1591521== 
+==1591521== 40 bytes in 1 blocks are definitely lost in loss record 5 of 11
+==1591521==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591521==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591521==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591521==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591521==    by 0x407214: main (mandatory.cpp:110)
+==1591521== 
+==1591521== 42 bytes in 1 blocks are definitely lost in loss record 6 of 11
+==1591521==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591521==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591521==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591521==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591521==    by 0x4071F0: main (mandatory.cpp:110)
+==1591521== 
+==1591521== 43 bytes in 1 blocks are definitely lost in loss record 8 of 11
+==1591521==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591521==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591521==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591521==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591521==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591521==    by 0x4071DE: main (mandatory.cpp:110)
+==1591521== 
+==1591521== 43 bytes in 1 blocks are definitely lost in loss record 9 of 11
+==1591521==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591521==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591521==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591521==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591521==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591521==    by 0x4071F0: main (mandatory.cpp:110)
+==1591521== 
+==1591521== 43 bytes in 1 blocks are definitely lost in loss record 10 of 11
+==1591521==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591521==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591521==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591521==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591521==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591521==    by 0x407214: main (mandatory.cpp:110)
+==1591521== 
+==1591521== 43 bytes in 1 blocks are definitely lost in loss record 11 of 11
+==1591521==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591521==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591521==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591521==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591521==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591521==    by 0x407238: main (mandatory.cpp:110)
+==1591521== 
+files/alternate_line_nl_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.KO 
+==1591522== 1 bytes in 1 blocks are definitely lost in loss record 1 of 11
+==1591522==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591522==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591522==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591522==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591522==    by 0x407559: main (mandatory.cpp:123)
+==1591522== 
+==1591522== 1 bytes in 1 blocks are definitely lost in loss record 2 of 11
+==1591522==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591522==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591522==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591522==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591522==    by 0x4075E3: main (mandatory.cpp:123)
+==1591522== 
+==1591522== 9 bytes in 1 blocks are definitely lost in loss record 3 of 11
+==1591522==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591522==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591522==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591522==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591522==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591522==    by 0x4075D7: main (mandatory.cpp:123)
+==1591522== 
+==1591522== 35 bytes in 1 blocks are definitely lost in loss record 4 of 11
+==1591522==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591522==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591522==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591522==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591522==    by 0x4075D7: main (mandatory.cpp:123)
+==1591522== 
+==1591522== 37 bytes in 1 blocks are definitely lost in loss record 5 of 11
+==1591522==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591522==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591522==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591522==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591522==    by 0x4075B3: main (mandatory.cpp:123)
+==1591522== 
+==1591522== 40 bytes in 1 blocks are definitely lost in loss record 6 of 11
+==1591522==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591522==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591522==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591522==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591522==    by 0x40758F: main (mandatory.cpp:123)
+==1591522== 
+==1591522== 42 bytes in 1 blocks are definitely lost in loss record 7 of 11
+==1591522==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591522==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591522==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591522==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591522==    by 0x40756B: main (mandatory.cpp:123)
+==1591522== 
+==1591522== 43 bytes in 1 blocks are definitely lost in loss record 8 of 11
+==1591522==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591522==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591522==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591522==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591522==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591522==    by 0x407559: main (mandatory.cpp:123)
+==1591522== 
+==1591522== 43 bytes in 1 blocks are definitely lost in loss record 9 of 11
+==1591522==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591522==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591522==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591522==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591522==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591522==    by 0x40756B: main (mandatory.cpp:123)
+==1591522== 
+==1591522== 43 bytes in 1 blocks are definitely lost in loss record 10 of 11
+==1591522==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591522==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591522==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591522==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591522==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591522==    by 0x40758F: main (mandatory.cpp:123)
+==1591522== 
+==1591522== 43 bytes in 1 blocks are definitely lost in loss record 11 of 11
+==1591522==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591522==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591522==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591522==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591522==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591522==    by 0x4075B3: main (mandatory.cpp:123)
+==1591522== 
+files/big_line_no_nl: 1.OK 2.OK 
+files/big_line_with_nl: 1.OK 2.KO 
+==1591524== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591524==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591524==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591524==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591524==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591524==    by 0x407BB9: main (mandatory.cpp:140)
+==1591524== 
+stdin: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.KO 
+==1591525== 1 bytes in 1 blocks are definitely lost in loss record 1 of 11
+==1591525==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591525==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591525==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591525==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591525==    by 0x407EA8: main (mandatory.cpp:145)
+==1591525== 
+==1591525== 1 bytes in 1 blocks are definitely lost in loss record 2 of 11
+==1591525==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591525==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591525==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591525==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591525==    by 0x407F2A: main (mandatory.cpp:145)
+==1591525== 
+==1591525== 9 bytes in 1 blocks are definitely lost in loss record 3 of 11
+==1591525==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591525==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591525==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591525==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591525==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591525==    by 0x407F1F: main (mandatory.cpp:145)
+==1591525== 
+==1591525== 35 bytes in 1 blocks are definitely lost in loss record 4 of 11
+==1591525==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591525==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591525==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591525==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591525==    by 0x407F1F: main (mandatory.cpp:145)
+==1591525== 
+==1591525== 37 bytes in 1 blocks are definitely lost in loss record 5 of 11
+==1591525==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591525==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591525==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591525==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591525==    by 0x407EFD: main (mandatory.cpp:145)
+==1591525== 
+==1591525== 40 bytes in 1 blocks are definitely lost in loss record 6 of 11
+==1591525==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591525==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591525==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591525==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591525==    by 0x407EDB: main (mandatory.cpp:145)
+==1591525== 
+==1591525== 42 bytes in 1 blocks are definitely lost in loss record 7 of 11
+==1591525==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591525==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591525==    by 0x4084C0: get_next_line (get_next_line.c:115)
+==1591525==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591525==    by 0x407EB9: main (mandatory.cpp:145)
+==1591525== 
+==1591525== 43 bytes in 1 blocks are definitely lost in loss record 8 of 11
+==1591525==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591525==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591525==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591525==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591525==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591525==    by 0x407EA8: main (mandatory.cpp:145)
+==1591525== 
+==1591525== 43 bytes in 1 blocks are definitely lost in loss record 9 of 11
+==1591525==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591525==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591525==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591525==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591525==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591525==    by 0x407EB9: main (mandatory.cpp:145)
+==1591525== 
+==1591525== 43 bytes in 1 blocks are definitely lost in loss record 10 of 11
+==1591525==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591525==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591525==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591525==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591525==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591525==    by 0x407EDB: main (mandatory.cpp:145)
+==1591525== 
+==1591525== 43 bytes in 1 blocks are definitely lost in loss record 11 of 11
+==1591525==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591525==    by 0x408154: ft_strdup (get_next_line.c:25)
+==1591525==    by 0x408401: ft_read_line (get_next_line.c:96)
+==1591525==    by 0x4085FF: get_next_line (get_next_line.c:128)
+==1591525==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591525==    by 0x407EFD: main (mandatory.cpp:145)
+==1591525== 
+
+[BUFFER_SIZE = 10000000]: 
+Invalid fd: 1.OK 2.OK 3.OK 
+files/empty: 1.OK 2.KO 
+==1591542== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591542==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591542==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591542==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591542==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591542==    by 0x405075: main (mandatory.cpp:35)
+==1591542== 
+files/nl: 1.OK 2.KO 
+==1591543== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591543==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591543==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591543==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591543==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591543==    by 0x405360: main (mandatory.cpp:40)
+==1591543== 
+files/41_no_nl: 1.OK 2.OK 
+files/41_with_nl: 1.OK 2.OK 3.OK 
+==1591545== 2 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==1591545==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591545==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591545==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591545==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591545==    by 0x40593C: main (mandatory.cpp:50)
+==1591545== 
+files/42_no_nl: 1.OK 2.OK 
+files/42_with_nl: 1.OK 2.OK 3.OK 
+==1591547== 2 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==1591547==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591547==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591547==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591547==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591547==    by 0x405F24: main (mandatory.cpp:61)
+==1591547== 
+files/43_no_nl: 1.OK 2.OK 
+files/43_with_nl: 1.OK 2.OK 3.OK 
+==1591549== 2 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==1591549==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591549==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591549==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591549==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591549==    by 0x406516: main (mandatory.cpp:77)
+==1591549== 
+files/multiple_nlx5: 1.OK 2.OK 3.OK 4.OK 5.OK 6.KO 
+==1591550== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591550==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591550==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591550==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591550==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591550==    by 0x406855: main (mandatory.cpp:83)
+==1591550== 
+files/multiple_line_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
+==1591551== 42 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==1591551==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591551==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591551==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591551==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591551==    by 0x406B7C: main (mandatory.cpp:92)
+==1591551== 
+files/multiple_line_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.KO 
+==1591552== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591552==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591552==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591552==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591552==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591552==    by 0x406EBB: main (mandatory.cpp:101)
+==1591552== 
+files/alternate_line_nl_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+==1591553== 42 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==1591553==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591553==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591553==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591553==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591553==    by 0x40722A: main (mandatory.cpp:110)
+==1591553== 
+files/alternate_line_nl_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.KO 
+==1591554== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591554==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591554==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591554==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591554==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591554==    by 0x4075B1: main (mandatory.cpp:123)
+==1591554== 
+files/big_line_no_nl: 1.OK 2.OK 
+files/big_line_with_nl: 1.OK 2.KO 
+==1591556== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591556==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591556==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591556==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591556==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591556==    by 0x407B87: main (mandatory.cpp:140)
+==1591556== 
+stdin: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.KO 
+==1591557== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591557==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591557==    by 0x408122: ft_strdup (get_next_line.c:25)
+==1591557==    by 0x40848E: get_next_line (get_next_line.c:115)
+==1591557==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591557==    by 0x407EF8: main (mandatory.cpp:145)
+==1591557== 
+
+[Static = 1]
+[Bonus]
+[BUFFER_SIZE = 1]: 
+Invalid fd: 1.OK 2.OK 3.OK 
+files/empty: 1.OK 2.KO 
+==1591587== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591587==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591587==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591587==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591587==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591587==    by 0x405075: main (mandatory.cpp:35)
+==1591587== 
+files/nl: 1.OK 2.KO 
+==1591588== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591588==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591588==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591588==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591588==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591588==    by 0x405360: main (mandatory.cpp:40)
+==1591588== 
+files/41_no_nl: 1.OK 2.OK 
+files/41_with_nl: 1.OK 2.OK 3.OK 
+==1591590== 1 bytes in 1 blocks are definitely lost in loss record 1 of 3
+==1591590==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591590==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591590==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591590==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591590==    by 0x40593C: main (mandatory.cpp:50)
+==1591590== 
+==1591590== 2 bytes in 1 blocks are definitely lost in loss record 3 of 3
+==1591590==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591590==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591590==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591590==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591590==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591590==    by 0x40593C: main (mandatory.cpp:50)
+==1591590== 
+files/42_no_nl: 1.OK 2.OK 
+files/42_with_nl: 1.OK 2.OK 3.OK 
+==1591592== 1 bytes in 1 blocks are definitely lost in loss record 1 of 3
+==1591592==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591592==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591592==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591592==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591592==    by 0x405F24: main (mandatory.cpp:61)
+==1591592== 
+==1591592== 2 bytes in 1 blocks are definitely lost in loss record 3 of 3
+==1591592==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591592==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591592==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591592==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591592==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591592==    by 0x405F24: main (mandatory.cpp:61)
+==1591592== 
+files/43_no_nl: 1.OK 2.OK 
+files/43_with_nl: 1.OK 2.OK 3.OK 
+==1591594== 1 bytes in 1 blocks are definitely lost in loss record 1 of 3
+==1591594==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591594==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591594==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591594==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591594==    by 0x406516: main (mandatory.cpp:77)
+==1591594== 
+==1591594== 2 bytes in 1 blocks are definitely lost in loss record 3 of 3
+==1591594==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591594==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591594==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591594==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591594==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591594==    by 0x406516: main (mandatory.cpp:77)
+==1591594== 
+files/multiple_nlx5: 1.OK 2.OK 3.OK 4.OK 5.OK 6.KO 
+==1591595== 1 bytes in 1 blocks are definitely lost in loss record 1 of 9
+==1591595==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591595==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591595==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591595==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591595==    by 0x406813: main (mandatory.cpp:83)
+==1591595== 
+==1591595== 1 bytes in 1 blocks are definitely lost in loss record 2 of 9
+==1591595==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591595==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591595==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591595==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591595==    by 0x406825: main (mandatory.cpp:83)
+==1591595== 
+==1591595== 1 bytes in 1 blocks are definitely lost in loss record 3 of 9
+==1591595==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591595==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591595==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591595==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591595==    by 0x406837: main (mandatory.cpp:83)
+==1591595== 
+==1591595== 1 bytes in 1 blocks are definitely lost in loss record 4 of 9
+==1591595==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591595==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591595==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591595==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591595==    by 0x406849: main (mandatory.cpp:83)
+==1591595== 
+==1591595== 1 bytes in 1 blocks are definitely lost in loss record 5 of 9
+==1591595==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591595==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591595==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591595==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591595==    by 0x406855: main (mandatory.cpp:83)
+==1591595== 
+==1591595== 2 bytes in 1 blocks are definitely lost in loss record 6 of 9
+==1591595==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591595==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591595==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591595==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591595==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591595==    by 0x406813: main (mandatory.cpp:83)
+==1591595== 
+==1591595== 2 bytes in 1 blocks are definitely lost in loss record 7 of 9
+==1591595==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591595==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591595==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591595==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591595==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591595==    by 0x406825: main (mandatory.cpp:83)
+==1591595== 
+==1591595== 2 bytes in 1 blocks are definitely lost in loss record 8 of 9
+==1591595==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591595==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591595==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591595==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591595==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591595==    by 0x406837: main (mandatory.cpp:83)
+==1591595== 
+==1591595== 2 bytes in 1 blocks are definitely lost in loss record 9 of 9
+==1591595==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591595==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591595==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591595==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591595==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591595==    by 0x406849: main (mandatory.cpp:83)
+==1591595== 
+files/multiple_line_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
+==1591596== 1 bytes in 1 blocks are definitely lost in loss record 1 of 9
+==1591596==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591596==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591596==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591596==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591596==    by 0x406B46: main (mandatory.cpp:92)
+==1591596== 
+==1591596== 1 bytes in 1 blocks are definitely lost in loss record 2 of 9
+==1591596==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591596==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591596==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591596==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591596==    by 0x406B58: main (mandatory.cpp:92)
+==1591596== 
+==1591596== 1 bytes in 1 blocks are definitely lost in loss record 3 of 9
+==1591596==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591596==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591596==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591596==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591596==    by 0x406B6A: main (mandatory.cpp:92)
+==1591596== 
+==1591596== 1 bytes in 1 blocks are definitely lost in loss record 4 of 9
+==1591596==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591596==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591596==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591596==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591596==    by 0x406B7C: main (mandatory.cpp:92)
+==1591596== 
+==1591596== 42 bytes in 1 blocks are definitely lost in loss record 6 of 9
+==1591596==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591596==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591596==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591596==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591596==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591596==    by 0x406B7C: main (mandatory.cpp:92)
+==1591596== 
+==1591596== 44 bytes in 1 blocks are definitely lost in loss record 7 of 9
+==1591596==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591596==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591596==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591596==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591596==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591596==    by 0x406B46: main (mandatory.cpp:92)
+==1591596== 
+==1591596== 44 bytes in 1 blocks are definitely lost in loss record 8 of 9
+==1591596==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591596==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591596==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591596==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591596==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591596==    by 0x406B6A: main (mandatory.cpp:92)
+==1591596== 
+==1591596== 45 bytes in 1 blocks are definitely lost in loss record 9 of 9
+==1591596==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591596==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591596==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591596==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591596==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591596==    by 0x406B58: main (mandatory.cpp:92)
+==1591596== 
+files/multiple_line_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.KO 
+==1591597== 1 bytes in 1 blocks are definitely lost in loss record 1 of 9
+==1591597==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591597==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591597==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591597==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591597==    by 0x406E79: main (mandatory.cpp:101)
+==1591597== 
+==1591597== 1 bytes in 1 blocks are definitely lost in loss record 2 of 9
+==1591597==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591597==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591597==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591597==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591597==    by 0x406E8B: main (mandatory.cpp:101)
+==1591597== 
+==1591597== 1 bytes in 1 blocks are definitely lost in loss record 3 of 9
+==1591597==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591597==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591597==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591597==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591597==    by 0x406E9D: main (mandatory.cpp:101)
+==1591597== 
+==1591597== 1 bytes in 1 blocks are definitely lost in loss record 4 of 9
+==1591597==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591597==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591597==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591597==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591597==    by 0x406EAF: main (mandatory.cpp:101)
+==1591597== 
+==1591597== 1 bytes in 1 blocks are definitely lost in loss record 5 of 9
+==1591597==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591597==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591597==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591597==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591597==    by 0x406EBB: main (mandatory.cpp:101)
+==1591597== 
+==1591597== 42 bytes in 1 blocks are definitely lost in loss record 6 of 9
+==1591597==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591597==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591597==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591597==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591597==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591597==    by 0x406EAF: main (mandatory.cpp:101)
+==1591597== 
+==1591597== 43 bytes in 1 blocks are definitely lost in loss record 7 of 9
+==1591597==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591597==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591597==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591597==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591597==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591597==    by 0x406E79: main (mandatory.cpp:101)
+==1591597== 
+==1591597== 43 bytes in 1 blocks are definitely lost in loss record 8 of 9
+==1591597==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591597==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591597==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591597==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591597==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591597==    by 0x406E9D: main (mandatory.cpp:101)
+==1591597== 
+==1591597== 44 bytes in 1 blocks are definitely lost in loss record 9 of 9
+==1591597==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591597==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591597==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591597==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591597==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591597==    by 0x406E8B: main (mandatory.cpp:101)
+==1591597== 
+files/alternate_line_nl_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+==1591598== 1 bytes in 1 blocks are definitely lost in loss record 1 of 17
+==1591598==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591598==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591598==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591598==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591598==    by 0x4071AC: main (mandatory.cpp:110)
+==1591598== 
+==1591598== 1 bytes in 1 blocks are definitely lost in loss record 2 of 17
+==1591598==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591598==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591598==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591598==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591598==    by 0x4071BE: main (mandatory.cpp:110)
+==1591598== 
+==1591598== 1 bytes in 1 blocks are definitely lost in loss record 3 of 17
+==1591598==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591598==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591598==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591598==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591598==    by 0x4071D0: main (mandatory.cpp:110)
+==1591598== 
+==1591598== 1 bytes in 1 blocks are definitely lost in loss record 4 of 17
+==1591598==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591598==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591598==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591598==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591598==    by 0x4071E2: main (mandatory.cpp:110)
+==1591598== 
+==1591598== 1 bytes in 1 blocks are definitely lost in loss record 5 of 17
+==1591598==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591598==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591598==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591598==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591598==    by 0x4071F4: main (mandatory.cpp:110)
+==1591598== 
+==1591598== 1 bytes in 1 blocks are definitely lost in loss record 6 of 17
+==1591598==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591598==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591598==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591598==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591598==    by 0x407206: main (mandatory.cpp:110)
+==1591598== 
+==1591598== 1 bytes in 1 blocks are definitely lost in loss record 7 of 17
+==1591598==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591598==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591598==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591598==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591598==    by 0x407218: main (mandatory.cpp:110)
+==1591598== 
+==1591598== 1 bytes in 1 blocks are definitely lost in loss record 8 of 17
+==1591598==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591598==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591598==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591598==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591598==    by 0x40722A: main (mandatory.cpp:110)
+==1591598== 
+==1591598== 2 bytes in 1 blocks are definitely lost in loss record 10 of 17
+==1591598==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591598==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591598==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591598==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591598==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591598==    by 0x4071AC: main (mandatory.cpp:110)
+==1591598== 
+==1591598== 2 bytes in 1 blocks are definitely lost in loss record 11 of 17
+==1591598==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591598==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591598==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591598==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591598==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591598==    by 0x4071D0: main (mandatory.cpp:110)
+==1591598== 
+==1591598== 2 bytes in 1 blocks are definitely lost in loss record 12 of 17
+==1591598==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591598==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591598==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591598==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591598==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591598==    by 0x4071F4: main (mandatory.cpp:110)
+==1591598== 
+==1591598== 2 bytes in 1 blocks are definitely lost in loss record 13 of 17
+==1591598==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591598==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591598==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591598==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591598==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591598==    by 0x407218: main (mandatory.cpp:110)
+==1591598== 
+==1591598== 42 bytes in 1 blocks are definitely lost in loss record 14 of 17
+==1591598==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591598==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591598==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591598==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591598==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591598==    by 0x40722A: main (mandatory.cpp:110)
+==1591598== 
+==1591598== 44 bytes in 1 blocks are definitely lost in loss record 15 of 17
+==1591598==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591598==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591598==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591598==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591598==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591598==    by 0x4071BE: main (mandatory.cpp:110)
+==1591598== 
+==1591598== 44 bytes in 1 blocks are definitely lost in loss record 16 of 17
+==1591598==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591598==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591598==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591598==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591598==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591598==    by 0x407206: main (mandatory.cpp:110)
+==1591598== 
+==1591598== 45 bytes in 1 blocks are definitely lost in loss record 17 of 17
+==1591598==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591598==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591598==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591598==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591598==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591598==    by 0x4071E2: main (mandatory.cpp:110)
+==1591598== 
+files/alternate_line_nl_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.KO 
+==1591599== 1 bytes in 1 blocks are definitely lost in loss record 1 of 17
+==1591599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591599==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591599==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591599==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591599==    by 0x407527: main (mandatory.cpp:123)
+==1591599== 
+==1591599== 1 bytes in 1 blocks are definitely lost in loss record 2 of 17
+==1591599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591599==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591599==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591599==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591599==    by 0x407539: main (mandatory.cpp:123)
+==1591599== 
+==1591599== 1 bytes in 1 blocks are definitely lost in loss record 3 of 17
+==1591599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591599==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591599==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591599==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591599==    by 0x40754B: main (mandatory.cpp:123)
+==1591599== 
+==1591599== 1 bytes in 1 blocks are definitely lost in loss record 4 of 17
+==1591599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591599==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591599==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591599==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591599==    by 0x40755D: main (mandatory.cpp:123)
+==1591599== 
+==1591599== 1 bytes in 1 blocks are definitely lost in loss record 5 of 17
+==1591599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591599==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591599==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591599==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591599==    by 0x40756F: main (mandatory.cpp:123)
+==1591599== 
+==1591599== 1 bytes in 1 blocks are definitely lost in loss record 6 of 17
+==1591599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591599==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591599==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591599==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591599==    by 0x407581: main (mandatory.cpp:123)
+==1591599== 
+==1591599== 1 bytes in 1 blocks are definitely lost in loss record 7 of 17
+==1591599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591599==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591599==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591599==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591599==    by 0x407593: main (mandatory.cpp:123)
+==1591599== 
+==1591599== 1 bytes in 1 blocks are definitely lost in loss record 8 of 17
+==1591599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591599==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591599==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591599==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591599==    by 0x4075A5: main (mandatory.cpp:123)
+==1591599== 
+==1591599== 1 bytes in 1 blocks are definitely lost in loss record 9 of 17
+==1591599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591599==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591599==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591599==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591599==    by 0x4075B1: main (mandatory.cpp:123)
+==1591599== 
+==1591599== 2 bytes in 1 blocks are definitely lost in loss record 10 of 17
+==1591599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591599==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591599==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591599==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591599==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591599==    by 0x407527: main (mandatory.cpp:123)
+==1591599== 
+==1591599== 2 bytes in 1 blocks are definitely lost in loss record 11 of 17
+==1591599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591599==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591599==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591599==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591599==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591599==    by 0x40754B: main (mandatory.cpp:123)
+==1591599== 
+==1591599== 2 bytes in 1 blocks are definitely lost in loss record 12 of 17
+==1591599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591599==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591599==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591599==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591599==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591599==    by 0x40756F: main (mandatory.cpp:123)
+==1591599== 
+==1591599== 2 bytes in 1 blocks are definitely lost in loss record 13 of 17
+==1591599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591599==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591599==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591599==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591599==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591599==    by 0x407593: main (mandatory.cpp:123)
+==1591599== 
+==1591599== 43 bytes in 1 blocks are definitely lost in loss record 14 of 17
+==1591599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591599==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591599==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591599==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591599==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591599==    by 0x4075A5: main (mandatory.cpp:123)
+==1591599== 
+==1591599== 44 bytes in 1 blocks are definitely lost in loss record 15 of 17
+==1591599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591599==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591599==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591599==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591599==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591599==    by 0x407539: main (mandatory.cpp:123)
+==1591599== 
+==1591599== 44 bytes in 1 blocks are definitely lost in loss record 16 of 17
+==1591599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591599==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591599==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591599==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591599==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591599==    by 0x407581: main (mandatory.cpp:123)
+==1591599== 
+==1591599== 45 bytes in 1 blocks are definitely lost in loss record 17 of 17
+==1591599==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591599==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591599==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591599==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591599==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591599==    by 0x40755D: main (mandatory.cpp:123)
+==1591599== 
+files/big_line_no_nl: 1.OK 2.OK 
+files/big_line_with_nl: 1.OK 2.KO 
+==1591601== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591601==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591601==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591601==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591601==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591601==    by 0x407B87: main (mandatory.cpp:140)
+==1591601== 
+stdin: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.KO 
+==1591602== 1 bytes in 1 blocks are definitely lost in loss record 1 of 17
+==1591602==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591602==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591602==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591602==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591602==    by 0x407E76: main (mandatory.cpp:145)
+==1591602== 
+==1591602== 1 bytes in 1 blocks are definitely lost in loss record 2 of 17
+==1591602==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591602==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591602==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591602==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591602==    by 0x407E87: main (mandatory.cpp:145)
+==1591602== 
+==1591602== 1 bytes in 1 blocks are definitely lost in loss record 3 of 17
+==1591602==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591602==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591602==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591602==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591602==    by 0x407E98: main (mandatory.cpp:145)
+==1591602== 
+==1591602== 1 bytes in 1 blocks are definitely lost in loss record 4 of 17
+==1591602==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591602==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591602==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591602==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591602==    by 0x407EA9: main (mandatory.cpp:145)
+==1591602== 
+==1591602== 1 bytes in 1 blocks are definitely lost in loss record 5 of 17
+==1591602==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591602==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591602==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591602==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591602==    by 0x407EBA: main (mandatory.cpp:145)
+==1591602== 
+==1591602== 1 bytes in 1 blocks are definitely lost in loss record 6 of 17
+==1591602==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591602==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591602==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591602==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591602==    by 0x407ECB: main (mandatory.cpp:145)
+==1591602== 
+==1591602== 1 bytes in 1 blocks are definitely lost in loss record 7 of 17
+==1591602==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591602==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591602==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591602==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591602==    by 0x407EDC: main (mandatory.cpp:145)
+==1591602== 
+==1591602== 1 bytes in 1 blocks are definitely lost in loss record 8 of 17
+==1591602==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591602==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591602==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591602==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591602==    by 0x407EED: main (mandatory.cpp:145)
+==1591602== 
+==1591602== 1 bytes in 1 blocks are definitely lost in loss record 9 of 17
+==1591602==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591602==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591602==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591602==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591602==    by 0x407EF8: main (mandatory.cpp:145)
+==1591602== 
+==1591602== 2 bytes in 1 blocks are definitely lost in loss record 10 of 17
+==1591602==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591602==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591602==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591602==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591602==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591602==    by 0x407E76: main (mandatory.cpp:145)
+==1591602== 
+==1591602== 2 bytes in 1 blocks are definitely lost in loss record 11 of 17
+==1591602==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591602==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591602==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591602==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591602==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591602==    by 0x407E98: main (mandatory.cpp:145)
+==1591602== 
+==1591602== 2 bytes in 1 blocks are definitely lost in loss record 12 of 17
+==1591602==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591602==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591602==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591602==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591602==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591602==    by 0x407EBA: main (mandatory.cpp:145)
+==1591602== 
+==1591602== 2 bytes in 1 blocks are definitely lost in loss record 13 of 17
+==1591602==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591602==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591602==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591602==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591602==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591602==    by 0x407EDC: main (mandatory.cpp:145)
+==1591602== 
+==1591602== 43 bytes in 1 blocks are definitely lost in loss record 14 of 17
+==1591602==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591602==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591602==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591602==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591602==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591602==    by 0x407EED: main (mandatory.cpp:145)
+==1591602== 
+==1591602== 44 bytes in 1 blocks are definitely lost in loss record 15 of 17
+==1591602==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591602==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591602==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591602==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591602==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591602==    by 0x407E87: main (mandatory.cpp:145)
+==1591602== 
+==1591602== 44 bytes in 1 blocks are definitely lost in loss record 16 of 17
+==1591602==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591602==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591602==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591602==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591602==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591602==    by 0x407ECB: main (mandatory.cpp:145)
+==1591602== 
+==1591602== 45 bytes in 1 blocks are definitely lost in loss record 17 of 17
+==1591602==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591602==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591602==    by 0x4083CF: ft_read_line (get_next_line_bonus.c:96)
+==1591602==    by 0x4085CD: get_next_line (get_next_line_bonus.c:128)
+==1591602==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591602==    by 0x407EA9: main (mandatory.cpp:145)
+==1591602== 
+
+[BUFFER_SIZE = 42]: 
+Invalid fd: 1.OK 2.OK 3.OK 
+files/empty: 1.OK 2.KO 
+==1591619== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591619==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591619==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591619==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591619==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591619==    by 0x405075: main (mandatory.cpp:35)
+==1591619== 
+files/nl: 1.OK 2.KO 
+==1591620== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591620==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591620==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591620==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591620==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591620==    by 0x405360: main (mandatory.cpp:40)
+==1591620== 
+files/41_no_nl: 1.OK 2.OK 
+files/41_with_nl: 1.OK 2.OK 3.OK 
+==1591622== 2 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==1591622==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591622==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591622==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591622==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591622==    by 0x40593C: main (mandatory.cpp:50)
+==1591622== 
+files/42_no_nl: 1.OK 2.OK 
+files/42_with_nl: 1.OK 2.OK 3.KO 
+==1591624== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591624==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591624==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591624==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591624==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591624==    by 0x405F62: main (mandatory.cpp:61)
+==1591624== 
+files/43_no_nl: 1.OK 2.OK 
+files/43_with_nl: 1.OK 2.OK 3.OK 
+==1591626== 2 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==1591626==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591626==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591626==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591626==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591626==    by 0x406548: main (mandatory.cpp:77)
+==1591626== 
+files/multiple_nlx5: 1.OK 2.OK 3.OK 4.OK 5.OK 6.KO 
+==1591627== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591627==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591627==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591627==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591627==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591627==    by 0x406887: main (mandatory.cpp:83)
+==1591627== 
+files/multiple_line_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
+==1591628== 1 bytes in 1 blocks are definitely lost in loss record 1 of 9
+==1591628==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591628==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591628==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591628==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591628==    by 0x406B78: main (mandatory.cpp:92)
+==1591628== 
+==1591628== 4 bytes in 1 blocks are definitely lost in loss record 2 of 9
+==1591628==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591628==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591628==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591628==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591628==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591628==    by 0x406BAE: main (mandatory.cpp:92)
+==1591628== 
+==1591628== 39 bytes in 1 blocks are definitely lost in loss record 3 of 9
+==1591628==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591628==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591628==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591628==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591628==    by 0x406BAE: main (mandatory.cpp:92)
+==1591628== 
+==1591628== 40 bytes in 1 blocks are definitely lost in loss record 4 of 9
+==1591628==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591628==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591628==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591628==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591628==    by 0x406B9C: main (mandatory.cpp:92)
+==1591628== 
+==1591628== 42 bytes in 1 blocks are definitely lost in loss record 5 of 9
+==1591628==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591628==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591628==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591628==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591628==    by 0x406B8A: main (mandatory.cpp:92)
+==1591628== 
+==1591628== 43 bytes in 1 blocks are definitely lost in loss record 7 of 9
+==1591628==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591628==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591628==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591628==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591628==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591628==    by 0x406B8A: main (mandatory.cpp:92)
+==1591628== 
+==1591628== 43 bytes in 1 blocks are definitely lost in loss record 8 of 9
+==1591628==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591628==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591628==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591628==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591628==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591628==    by 0x406B9C: main (mandatory.cpp:92)
+==1591628== 
+==1591628== 85 bytes in 1 blocks are definitely lost in loss record 9 of 9
+==1591628==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591628==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591628==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591628==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591628==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591628==    by 0x406B78: main (mandatory.cpp:92)
+==1591628== 
+files/multiple_line_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.KO 
+==1591629== 1 bytes in 1 blocks are definitely lost in loss record 1 of 9
+==1591629==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591629==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591629==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591629==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591629==    by 0x406ECF: main (mandatory.cpp:101)
+==1591629== 
+==1591629== 1 bytes in 1 blocks are definitely lost in loss record 2 of 9
+==1591629==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591629==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591629==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591629==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591629==    by 0x406EE1: main (mandatory.cpp:101)
+==1591629== 
+==1591629== 1 bytes in 1 blocks are definitely lost in loss record 3 of 9
+==1591629==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591629==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591629==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591629==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591629==    by 0x406EED: main (mandatory.cpp:101)
+==1591629== 
+==1591629== 2 bytes in 1 blocks are definitely lost in loss record 4 of 9
+==1591629==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591629==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591629==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591629==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591629==    by 0x406EAB: main (mandatory.cpp:101)
+==1591629== 
+==1591629== 2 bytes in 1 blocks are definitely lost in loss record 5 of 9
+==1591629==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591629==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591629==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591629==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591629==    by 0x406EBD: main (mandatory.cpp:101)
+==1591629== 
+==1591629== 42 bytes in 1 blocks are definitely lost in loss record 6 of 9
+==1591629==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591629==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591629==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591629==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591629==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591629==    by 0x406EE1: main (mandatory.cpp:101)
+==1591629== 
+==1591629== 43 bytes in 1 blocks are definitely lost in loss record 7 of 9
+==1591629==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591629==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591629==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591629==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591629==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591629==    by 0x406EAB: main (mandatory.cpp:101)
+==1591629== 
+==1591629== 43 bytes in 1 blocks are definitely lost in loss record 8 of 9
+==1591629==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591629==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591629==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591629==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591629==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591629==    by 0x406EBD: main (mandatory.cpp:101)
+==1591629== 
+==1591629== 43 bytes in 1 blocks are definitely lost in loss record 9 of 9
+==1591629==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591629==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591629==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591629==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591629==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591629==    by 0x406ECF: main (mandatory.cpp:101)
+==1591629== 
+files/alternate_line_nl_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+==1591630== 1 bytes in 1 blocks are definitely lost in loss record 1 of 11
+==1591630==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591630==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591630==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591630==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591630==    by 0x4071DE: main (mandatory.cpp:110)
+==1591630== 
+==1591630== 8 bytes in 1 blocks are definitely lost in loss record 2 of 11
+==1591630==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591630==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591630==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591630==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591630==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591630==    by 0x40725C: main (mandatory.cpp:110)
+==1591630== 
+==1591630== 35 bytes in 1 blocks are definitely lost in loss record 3 of 11
+==1591630==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591630==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591630==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591630==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591630==    by 0x40725C: main (mandatory.cpp:110)
+==1591630== 
+==1591630== 37 bytes in 1 blocks are definitely lost in loss record 4 of 11
+==1591630==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591630==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591630==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591630==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591630==    by 0x407238: main (mandatory.cpp:110)
+==1591630== 
+==1591630== 40 bytes in 1 blocks are definitely lost in loss record 5 of 11
+==1591630==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591630==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591630==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591630==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591630==    by 0x407214: main (mandatory.cpp:110)
+==1591630== 
+==1591630== 42 bytes in 1 blocks are definitely lost in loss record 6 of 11
+==1591630==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591630==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591630==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591630==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591630==    by 0x4071F0: main (mandatory.cpp:110)
+==1591630== 
+==1591630== 43 bytes in 1 blocks are definitely lost in loss record 8 of 11
+==1591630==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591630==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591630==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591630==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591630==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591630==    by 0x4071DE: main (mandatory.cpp:110)
+==1591630== 
+==1591630== 43 bytes in 1 blocks are definitely lost in loss record 9 of 11
+==1591630==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591630==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591630==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591630==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591630==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591630==    by 0x4071F0: main (mandatory.cpp:110)
+==1591630== 
+==1591630== 43 bytes in 1 blocks are definitely lost in loss record 10 of 11
+==1591630==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591630==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591630==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591630==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591630==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591630==    by 0x407214: main (mandatory.cpp:110)
+==1591630== 
+==1591630== 43 bytes in 1 blocks are definitely lost in loss record 11 of 11
+==1591630==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591630==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591630==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591630==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591630==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591630==    by 0x407238: main (mandatory.cpp:110)
+==1591630== 
+files/alternate_line_nl_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.KO 
+==1591631== 1 bytes in 1 blocks are definitely lost in loss record 1 of 11
+==1591631==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591631==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591631==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591631==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591631==    by 0x407559: main (mandatory.cpp:123)
+==1591631== 
+==1591631== 1 bytes in 1 blocks are definitely lost in loss record 2 of 11
+==1591631==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591631==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591631==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591631==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591631==    by 0x4075E3: main (mandatory.cpp:123)
+==1591631== 
+==1591631== 9 bytes in 1 blocks are definitely lost in loss record 3 of 11
+==1591631==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591631==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591631==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591631==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591631==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591631==    by 0x4075D7: main (mandatory.cpp:123)
+==1591631== 
+==1591631== 35 bytes in 1 blocks are definitely lost in loss record 4 of 11
+==1591631==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591631==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591631==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591631==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591631==    by 0x4075D7: main (mandatory.cpp:123)
+==1591631== 
+==1591631== 37 bytes in 1 blocks are definitely lost in loss record 5 of 11
+==1591631==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591631==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591631==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591631==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591631==    by 0x4075B3: main (mandatory.cpp:123)
+==1591631== 
+==1591631== 40 bytes in 1 blocks are definitely lost in loss record 6 of 11
+==1591631==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591631==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591631==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591631==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591631==    by 0x40758F: main (mandatory.cpp:123)
+==1591631== 
+==1591631== 42 bytes in 1 blocks are definitely lost in loss record 7 of 11
+==1591631==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591631==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591631==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591631==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591631==    by 0x40756B: main (mandatory.cpp:123)
+==1591631== 
+==1591631== 43 bytes in 1 blocks are definitely lost in loss record 8 of 11
+==1591631==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591631==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591631==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591631==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591631==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591631==    by 0x407559: main (mandatory.cpp:123)
+==1591631== 
+==1591631== 43 bytes in 1 blocks are definitely lost in loss record 9 of 11
+==1591631==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591631==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591631==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591631==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591631==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591631==    by 0x40756B: main (mandatory.cpp:123)
+==1591631== 
+==1591631== 43 bytes in 1 blocks are definitely lost in loss record 10 of 11
+==1591631==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591631==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591631==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591631==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591631==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591631==    by 0x40758F: main (mandatory.cpp:123)
+==1591631== 
+==1591631== 43 bytes in 1 blocks are definitely lost in loss record 11 of 11
+==1591631==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591631==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591631==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591631==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591631==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591631==    by 0x4075B3: main (mandatory.cpp:123)
+==1591631== 
+files/big_line_no_nl: 1.OK 2.OK 
+files/big_line_with_nl: 1.OK 2.KO 
+==1591633== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591633==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591633==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591633==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591633==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591633==    by 0x407BB9: main (mandatory.cpp:140)
+==1591633== 
+stdin: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.KO 
+==1591634== 1 bytes in 1 blocks are definitely lost in loss record 1 of 11
+==1591634==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591634==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591634==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591634==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591634==    by 0x407EA8: main (mandatory.cpp:145)
+==1591634== 
+==1591634== 1 bytes in 1 blocks are definitely lost in loss record 2 of 11
+==1591634==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591634==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591634==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591634==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591634==    by 0x407F2A: main (mandatory.cpp:145)
+==1591634== 
+==1591634== 9 bytes in 1 blocks are definitely lost in loss record 3 of 11
+==1591634==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591634==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591634==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591634==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591634==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591634==    by 0x407F1F: main (mandatory.cpp:145)
+==1591634== 
+==1591634== 35 bytes in 1 blocks are definitely lost in loss record 4 of 11
+==1591634==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591634==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591634==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591634==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591634==    by 0x407F1F: main (mandatory.cpp:145)
+==1591634== 
+==1591634== 37 bytes in 1 blocks are definitely lost in loss record 5 of 11
+==1591634==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591634==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591634==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591634==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591634==    by 0x407EFD: main (mandatory.cpp:145)
+==1591634== 
+==1591634== 40 bytes in 1 blocks are definitely lost in loss record 6 of 11
+==1591634==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591634==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591634==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591634==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591634==    by 0x407EDB: main (mandatory.cpp:145)
+==1591634== 
+==1591634== 42 bytes in 1 blocks are definitely lost in loss record 7 of 11
+==1591634==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591634==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591634==    by 0x4084C0: get_next_line (get_next_line_bonus.c:115)
+==1591634==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591634==    by 0x407EB9: main (mandatory.cpp:145)
+==1591634== 
+==1591634== 43 bytes in 1 blocks are definitely lost in loss record 8 of 11
+==1591634==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591634==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591634==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591634==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591634==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591634==    by 0x407EA8: main (mandatory.cpp:145)
+==1591634== 
+==1591634== 43 bytes in 1 blocks are definitely lost in loss record 9 of 11
+==1591634==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591634==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591634==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591634==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591634==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591634==    by 0x407EB9: main (mandatory.cpp:145)
+==1591634== 
+==1591634== 43 bytes in 1 blocks are definitely lost in loss record 10 of 11
+==1591634==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591634==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591634==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591634==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591634==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591634==    by 0x407EDB: main (mandatory.cpp:145)
+==1591634== 
+==1591634== 43 bytes in 1 blocks are definitely lost in loss record 11 of 11
+==1591634==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591634==    by 0x408154: ft_strdup (get_next_line_bonus.c:25)
+==1591634==    by 0x408401: ft_read_line (get_next_line_bonus.c:96)
+==1591634==    by 0x4085FF: get_next_line (get_next_line_bonus.c:128)
+==1591634==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591634==    by 0x407EFD: main (mandatory.cpp:145)
+==1591634== 
+
+[BUFFER_SIZE = 10000000]: 
+Invalid fd: 1.OK 2.OK 3.OK 
+files/empty: 1.OK 2.KO 
+==1591651== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591651==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591651==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591651==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591651==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591651==    by 0x405075: main (mandatory.cpp:35)
+==1591651== 
+files/nl: 1.OK 2.KO 
+==1591652== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591652==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591652==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591652==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591652==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591652==    by 0x405360: main (mandatory.cpp:40)
+==1591652== 
+files/41_no_nl: 1.OK 2.OK 
+files/41_with_nl: 1.OK 2.OK 3.OK 
+==1591654== 2 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==1591654==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591654==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591654==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591654==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591654==    by 0x40593C: main (mandatory.cpp:50)
+==1591654== 
+files/42_no_nl: 1.OK 2.OK 
+files/42_with_nl: 1.OK 2.OK 3.OK 
+==1591656== 2 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==1591656==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591656==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591656==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591656==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591656==    by 0x405F24: main (mandatory.cpp:61)
+==1591656== 
+files/43_no_nl: 1.OK 2.OK 
+files/43_with_nl: 1.OK 2.OK 3.OK 
+==1591658== 2 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==1591658==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591658==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591658==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591658==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591658==    by 0x406516: main (mandatory.cpp:77)
+==1591658== 
+files/multiple_nlx5: 1.OK 2.OK 3.OK 4.OK 5.OK 6.KO 
+==1591659== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591659==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591659==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591659==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591659==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591659==    by 0x406855: main (mandatory.cpp:83)
+==1591659== 
+files/multiple_line_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
+==1591660== 42 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==1591660==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591660==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591660==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591660==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591660==    by 0x406B7C: main (mandatory.cpp:92)
+==1591660== 
+files/multiple_line_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.KO 
+==1591661== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591661==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591661==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591661==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591661==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591661==    by 0x406EBB: main (mandatory.cpp:101)
+==1591661== 
+files/alternate_line_nl_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
+==1591662== 42 bytes in 1 blocks are definitely lost in loss record 1 of 2
+==1591662==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591662==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591662==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591662==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591662==    by 0x40722A: main (mandatory.cpp:110)
+==1591662== 
+files/alternate_line_nl_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.KO 
+==1591663== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591663==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591663==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591663==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591663==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591663==    by 0x4075B1: main (mandatory.cpp:123)
+==1591663== 
+files/big_line_no_nl: 1.OK 2.OK 
+files/big_line_with_nl: 1.OK 2.KO 
+==1591665== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591665==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591665==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591665==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591665==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591665==    by 0x407B87: main (mandatory.cpp:140)
+==1591665== 
+stdin: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.KO 
+==1591666== 1 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==1591666==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591666==    by 0x408122: ft_strdup (get_next_line_bonus.c:25)
+==1591666==    by 0x40848E: get_next_line (get_next_line_bonus.c:115)
+==1591666==    by 0x402DE6: gnl(int, char const*) (gnl.cpp:20)
+==1591666==    by 0x407EF8: main (mandatory.cpp:145)
+==1591666== 
+
+[BUFFER_SIZE = 1]: 
+multiple fd: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 18.OK 19.KO 
+==1591681== 1 bytes in 1 blocks are definitely lost in loss record 1 of 18
+==1591681==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591681==    by 0x404F4F: ft_strdup (get_next_line_bonus.c:25)
+==1591681==    by 0x4052BB: get_next_line (get_next_line_bonus.c:115)
+==1591681==    by 0x402D96: gnl(int, char const*) (gnl.cpp:20)
+==1591681==    by 0x404D3F: main (bonus.cpp:43)
+==1591681== 
+==1591681== 1 bytes in 1 blocks are definitely lost in loss record 2 of 18
+==1591681==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591681==    by 0x404F4F: ft_strdup (get_next_line_bonus.c:25)
+==1591681==    by 0x4052BB: get_next_line (get_next_line_bonus.c:115)
+==1591681==    by 0x402D96: gnl(int, char const*) (gnl.cpp:20)
+==1591681==    by 0x404D5F: main (bonus.cpp:46)
+==1591681== 
+==1591681== 1 bytes in 1 blocks are definitely lost in loss record 3 of 18
+==1591681==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591681==    by 0x404F4F: ft_strdup (get_next_line_bonus.c:25)
+==1591681==    by 0x4052BB: get_next_line (get_next_line_bonus.c:115)
+==1591681==    by 0x402D96: gnl(int, char const*) (gnl.cpp:20)
+==1591681==    by 0x404D7F: main (bonus.cpp:49)
+==1591681== 
+==1591681== 1 bytes in 1 blocks are definitely lost in loss record 4 of 18
+==1591681==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591681==    by 0x404F4F: ft_strdup (get_next_line_bonus.c:25)
+==1591681==    by 0x4052BB: get_next_line (get_next_line_bonus.c:115)
+==1591681==    by 0x402D96: gnl(int, char const*) (gnl.cpp:20)
+==1591681==    by 0x404DFB: main (bonus.cpp:60)
+==1591681== 
+==1591681== 2 bytes in 1 blocks are definitely lost in loss record 16 of 18
+==1591681==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591681==    by 0x404F4F: ft_strdup (get_next_line_bonus.c:25)
+==1591681==    by 0x4051FC: ft_read_line (get_next_line_bonus.c:96)
+==1591681==    by 0x4053FA: get_next_line (get_next_line_bonus.c:128)
+==1591681==    by 0x402D96: gnl(int, char const*) (gnl.cpp:20)
+==1591681==    by 0x404D3F: main (bonus.cpp:43)
+==1591681== 
+==1591681== 2 bytes in 1 blocks are definitely lost in loss record 17 of 18
+==1591681==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591681==    by 0x404F4F: ft_strdup (get_next_line_bonus.c:25)
+==1591681==    by 0x4051FC: ft_read_line (get_next_line_bonus.c:96)
+==1591681==    by 0x4053FA: get_next_line (get_next_line_bonus.c:128)
+==1591681==    by 0x402D96: gnl(int, char const*) (gnl.cpp:20)
+==1591681==    by 0x404D5F: main (bonus.cpp:46)
+==1591681== 
+==1591681== 2 bytes in 1 blocks are definitely lost in loss record 18 of 18
+==1591681==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591681==    by 0x404F4F: ft_strdup (get_next_line_bonus.c:25)
+==1591681==    by 0x4051FC: ft_read_line (get_next_line_bonus.c:96)
+==1591681==    by 0x4053FA: get_next_line (get_next_line_bonus.c:128)
+==1591681==    by 0x402D96: gnl(int, char const*) (gnl.cpp:20)
+==1591681==    by 0x404D7F: main (bonus.cpp:49)
+==1591681== 
+[BUFFER_SIZE = 42]: 
+multiple fd: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 18.OK 19.KO 
+==1591696== 1 bytes in 1 blocks are definitely lost in loss record 1 of 16
+==1591696==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591696==    by 0x404F4F: ft_strdup (get_next_line_bonus.c:25)
+==1591696==    by 0x4052BB: get_next_line (get_next_line_bonus.c:115)
+==1591696==    by 0x402D96: gnl(int, char const*) (gnl.cpp:20)
+==1591696==    by 0x404D5F: main (bonus.cpp:46)
+==1591696== 
+==1591696== 1 bytes in 1 blocks are definitely lost in loss record 2 of 16
+==1591696==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591696==    by 0x404F4F: ft_strdup (get_next_line_bonus.c:25)
+==1591696==    by 0x4052BB: get_next_line (get_next_line_bonus.c:115)
+==1591696==    by 0x402D96: gnl(int, char const*) (gnl.cpp:20)
+==1591696==    by 0x404DFB: main (bonus.cpp:60)
+==1591696== 
+==1591696== 2 bytes in 1 blocks are definitely lost in loss record 3 of 16
+==1591696==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591696==    by 0x404F4F: ft_strdup (get_next_line_bonus.c:25)
+==1591696==    by 0x4052BB: get_next_line (get_next_line_bonus.c:115)
+==1591696==    by 0x402D96: gnl(int, char const*) (gnl.cpp:20)
+==1591696==    by 0x404D3F: main (bonus.cpp:43)
+==1591696== 
+==1591696== 2 bytes in 1 blocks are definitely lost in loss record 4 of 16
+==1591696==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591696==    by 0x404F4F: ft_strdup (get_next_line_bonus.c:25)
+==1591696==    by 0x4051FC: ft_read_line (get_next_line_bonus.c:96)
+==1591696==    by 0x4053FA: get_next_line (get_next_line_bonus.c:128)
+==1591696==    by 0x402D96: gnl(int, char const*) (gnl.cpp:20)
+==1591696==    by 0x404D5F: main (bonus.cpp:46)
+==1591696== 
+==1591696== 2 bytes in 1 blocks are definitely lost in loss record 5 of 16
+==1591696==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591696==    by 0x404F4F: ft_strdup (get_next_line_bonus.c:25)
+==1591696==    by 0x4052BB: get_next_line (get_next_line_bonus.c:115)
+==1591696==    by 0x402D96: gnl(int, char const*) (gnl.cpp:20)
+==1591696==    by 0x404D7F: main (bonus.cpp:49)
+==1591696== 
+[BUFFER_SIZE = 10000000]: 
+multiple fd: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 18.OK 19.KO 
+==1591711== 1 bytes in 1 blocks are definitely lost in loss record 1 of 15
+==1591711==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591711==    by 0x404F4F: ft_strdup (get_next_line_bonus.c:25)
+==1591711==    by 0x4052BB: get_next_line (get_next_line_bonus.c:115)
+==1591711==    by 0x402D96: gnl(int, char const*) (gnl.cpp:20)
+==1591711==    by 0x404DFB: main (bonus.cpp:60)
+==1591711== 
+==1591711== 2 bytes in 1 blocks are definitely lost in loss record 2 of 15
+==1591711==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591711==    by 0x404F4F: ft_strdup (get_next_line_bonus.c:25)
+==1591711==    by 0x4052BB: get_next_line (get_next_line_bonus.c:115)
+==1591711==    by 0x402D96: gnl(int, char const*) (gnl.cpp:20)
+==1591711==    by 0x404D3F: main (bonus.cpp:43)
+==1591711== 
+==1591711== 2 bytes in 1 blocks are definitely lost in loss record 3 of 15
+==1591711==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591711==    by 0x404F4F: ft_strdup (get_next_line_bonus.c:25)
+==1591711==    by 0x4052BB: get_next_line (get_next_line_bonus.c:115)
+==1591711==    by 0x402D96: gnl(int, char const*) (gnl.cpp:20)
+==1591711==    by 0x404D5F: main (bonus.cpp:46)
+==1591711== 
+==1591711== 2 bytes in 1 blocks are definitely lost in loss record 4 of 15
+==1591711==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1591711==    by 0x404F4F: ft_strdup (get_next_line_bonus.c:25)
+==1591711==    by 0x4052BB: get_next_line (get_next_line_bonus.c:115)
+==1591711==    by 0x402D96: gnl(int, char const*) (gnl.cpp:20)
+==1591711==    by 0x404D7F: main (bonus.cpp:49)
+==1591711== 
+
+To see the tests open: /home/jmiguele/francinette/tests/get_next_line/gnlTester/tests/mandatory.cpp
+and the bonus open: /home/jmiguele/francinette/tests/get_next_line/gnlTester/tests/bonus.cpp
+
+ℹ Running tests: fsoares (my own tests)
+BUFFER_SIZE: 1
+Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.KO 
+Segmentation fault (core dumped)
+make: [Makefile:23: mandatory] Error 139 (ignored)
+BUFFER_SIZE: 10
+Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.KO 
+Segmentation fault (core dumped)
+make: [Makefile:24: mandatory] Error 139 (ignored)
+BUFFER_SIZE: 1000000
+Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.KO 
+Segmentation fault (core dumped)
+make: [Makefile:25: mandatory] Error 139 (ignored)
+BONUS!
+BUFFER_SIZE: 1
+Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.KO 
+Segmentation fault (core dumped)
+make: [Makefile:29: bonus] Error 139 (ignored)
+BUFFER_SIZE: 10
+Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.KO 
+Segmentation fault (core dumped)
+make: [Makefile:30: bonus] Error 139 (ignored)
+BUFFER_SIZE: 1000000
+Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.KO 
+Segmentation fault (core dumped)
+make: [Makefile:31: bonus] Error 139 (ignored)
+BUFFER_SIZE: 1
+open, error, open   : 1.OK 2.OK 3.OK 4.OK 5.KO 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.KO 13.OK 14.KO 15_LEAKS.KO 
+Segmentation fault (core dumped)
+make: [Makefile:32: bonus] Error 139 (ignored)
+BUFFER_SIZE: 10
+open, error, open   : 1.OK 2.OK 3.OK 4.OK 5.KO 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.KO 13.OK 14.KO 15_LEAKS.KO 
+Segmentation fault (core dumped)
+make: [Makefile:33: bonus] Error 139 (ignored)
+BUFFER_SIZE: 1000000
+open, error, open   : 1.OK 2.OK 3.OK 4.OK 5.KO 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.KO 13.OK 14.KO 15_LEAKS.KO 
+Segmentation fault (core dumped)
+make: [Makefile:34: bonus] Error 139 (ignored)
+Errors found:
+
+To see the tests open: /home/jmiguele/francinette/tests/get_next_line/fsoares/tester.c
+
+
+Summary: 
+
+Norminette Errors: get_next_line.c, get_next_line_bonus.c
+
+Failed tests: gnlTester, fsoares

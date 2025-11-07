@@ -6,7 +6,7 @@
 /*   By: jmiguele <jmiguele@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 09:56:50 by jmiguele          #+#    #+#             */
-/*   Updated: 2025/11/06 12:48:28 by jmiguele         ###   ########.fr       */
+/*   Updated: 2025/11/07 10:49:09 by jmiguele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@
 #  define BUFFER_SIZE 42
 # endif
 
-# include <fcntl.h>
-# include <stdio.h> //
 # include <stdlib.h>
 # include <unistd.h>
 

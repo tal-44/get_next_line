@@ -6,7 +6,7 @@
 /*   By: jmiguele <jmiguele@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 09:37:48 by jmiguele          #+#    #+#             */
-/*   Updated: 2025/11/06 12:47:12 by jmiguele         ###   ########.fr       */
+/*   Updated: 2025/11/07 10:48:02 by jmiguele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static char	*ft_strdup(const char *src)
 	return ((char *)(dest));
 }
 
-static char *extract_line(char *line, char **buffer)
+static char	*ft_extract_line(char *line, char **buffer)
 {
 	size_t	i;
 	char	*rest;
@@ -70,16 +70,17 @@ static char *extract_line(char *line, char **buffer)
 static char	*ft_read_line(int fd, char *line, char *buffer)
 {
 	char	*temp_line;
-	ssize_t	*bytes_read;
+	ssize_t	bytes_read;
 
+	bytes_read = -1;
 	while (1)
 	{
-		*bytes_read = read(fd, buffer, BUFFER_SIZE);
-		if (*bytes_read < 0)
+		bytes_read = read(fd, buffer, BUFFER_SIZE);
+		if (bytes_read < 0)
 			return (free(line), NULL);
-		if (*bytes_read == 0)
+		if (bytes_read == 0)
 			break ;
-		buffer[*bytes_read] = '\0';
+		buffer[bytes_read] = '\0';
 		temp_line = ft_strjoin(line, buffer);
 		if (!temp_line)
 			return (free(line), NULL);
@@ -89,7 +90,7 @@ static char	*ft_read_line(int fd, char *line, char *buffer)
 		if (ft_strchr(line, '\n'))
 			break ;
 	}
-	if (*bytes_read == 0 && (!line || *line == '\0'))
+	if (bytes_read == 0 && (!line || *line == '\0'))
 		return (free(line), NULL);
 	temp_line = line;
 	line = ft_strdup(temp_line);
@@ -137,6 +138,7 @@ char	*get_next_line(int fd)
 		return (ft_extract_line(line, &buffer[fd]));
 	}
 }
+
 int	main(void)
 {
 	int		i;
@@ -144,19 +146,12 @@ int	main(void)
 	char	*line;
 
 	i = 0;
-	i++;
-	fd = open("test.txt", O_RDONLY);
-
-	line = get_next_line(fd);
-	if (line)
+	//	fd = open(1, O_RDONLY);
+	while (1)
 	{
-		printf("[1]\n%s\n", line);
-		free(line);
-	}
-	line = get_next_line(fd);
-	if (line)
-	{
-		printf("[2]\n%s\n", line);
+		line = get_next_line(1);
+		printf("%s\n", line);
+		//		printf("[%d]\n%s\n", i, line);
 		free(line);
 	}
 	if (fd >= 0)
