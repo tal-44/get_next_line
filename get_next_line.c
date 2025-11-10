@@ -6,18 +6,24 @@
 /*   By: jmiguele <jmiguele@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 09:37:48 by jmiguele          #+#    #+#             */
-/*   Updated: 2025/11/10 09:34:54 by jmiguele         ###   ########.fr       */
+/*   Updated: 2025/11/10 15:56:57 by jmiguele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static char *ft_frees(char **buffer, char *line, char *temp)
+static char	*ft_frees(char **buffer, char *line, char *temp)
 {
 	if (line)
+	{
 		free(line);
+		line = NULL;
+	}
 	if (temp)
+	{
 		free(temp);
+		temp = NULL;
+	}
 	if (buffer && *buffer)
 	{
 		free(*buffer);
@@ -26,10 +32,10 @@ static char *ft_frees(char **buffer, char *line, char *temp)
 	return (NULL);
 }
 
-static char *ft_strdup(const char *src)
+static char	*ft_strdup(const char *src)
 {
-	size_t i;
-	unsigned char *dest;
+	size_t			i;
+	unsigned char	*dest;
 
 	if (!src)
 		return (NULL);
@@ -49,11 +55,11 @@ static char *ft_strdup(const char *src)
 	return ((char *)(dest));
 }
 
-static char *ft_extract_line(char *line, char **buffer)
+static char	*ft_extract_line(char *line, char **buffer)
 {
-	size_t i;
-	char *rest;
-	char *temp;
+	size_t	i;
+	char	*rest;
+	char	*temp;
 
 	if (!line)
 		return (NULL);
@@ -66,13 +72,18 @@ static char *ft_extract_line(char *line, char **buffer)
 		if (!temp)
 		{
 			free(line);
+			line = NULL;
 			return (NULL);
 		}
 		ft_strlcpy(temp, line, i + 2);
+		// r   substr?
 		rest = ft_strdup(line + i + 1);
 		free(line);
 		if (buffer && *buffer)
+		{
 			free(*buffer);
+			*buffer = NULL;
+		}
 		line = temp;
 		*buffer = rest;
 	}
@@ -88,10 +99,10 @@ static char *ft_extract_line(char *line, char **buffer)
 	return (line);
 }
 
-static char *ft_read_line(int fd, char *line, char *buffer)
+static char	*ft_read_line(int fd, char *line, char *buffer)
 {
-	char *temp_line;
-	ssize_t bytes_read;
+	char	*temp_line;
+	ssize_t	bytes_read;
 
 	bytes_read = -1;
 	while (1)
@@ -100,7 +111,7 @@ static char *ft_read_line(int fd, char *line, char *buffer)
 		if (bytes_read < 0)
 			return (free(line), NULL);
 		if (bytes_read == 0)
-			break;
+			break ;
 		buffer[bytes_read] = '\0';
 		temp_line = ft_strjoin(line, buffer);
 		if (!temp_line)
@@ -109,7 +120,7 @@ static char *ft_read_line(int fd, char *line, char *buffer)
 			free(line);
 		line = temp_line;
 		if (ft_strchr(line, '\n'))
-			break;
+			break ;
 	}
 	if (bytes_read == 0 && (!line || *line == '\0'))
 		return (free(line), NULL);
@@ -120,71 +131,72 @@ static char *ft_read_line(int fd, char *line, char *buffer)
 	return (line);
 }
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
-	static char *buffer[1024];
-	char *line;
-	int had_data;
-	char *to_add;
-	char *new_line;
+	static char	*buffer;
+	char		*line;
+	int			had_data;
+	char		*to_add;
+	char		*new_line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	line = NULL;
 	had_data = 0;
-	if (!buffer[fd])
-	{
-		buffer[fd] = malloc((BUFFER_SIZE + 1) * sizeof(char));
-		buffer[fd][0] = '\0';
-	}
+	if (!buffer)
+		buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
 	else
 	{
-		line = ft_strdup(buffer[fd]);
+		line = ft_strdup(buffer);
 		if (!line)
-			return (ft_frees(&buffer[fd], line, NULL));
+			return (ft_frees(&buffer, line, NULL));
 		had_data = (line && line[0] != '\0');
-		if (buffer[fd])
-			free(buffer[fd]);
-		buffer[fd] = malloc((BUFFER_SIZE + 1) * sizeof(char));
-		if (!buffer[fd])
-			return (ft_frees(&buffer[fd], line, NULL));
-		buffer[fd][0] = '\0';
+		if (buffer)
+		{
+			free(buffer);
+			buffer = NULL;
+		}
+		buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
+		if (!buffer)
+			return (ft_frees(&buffer, line, NULL));
+		buffer[0] = '\0';
 	}
 	if (ft_strchr(line, '\n'))
-		return (ft_extract_line(line, &buffer[fd]));
+		return (ft_extract_line(line, &buffer));
 	else if (had_data)
 	{
-		to_add = ft_read_line(fd, NULL, buffer[fd]);
+		to_add = ft_read_line(fd, NULL, buffer);
 		if (!to_add)
-			return (ft_frees(&buffer[fd], line, NULL));
+			return (ft_frees(&buffer, line, NULL));
 		new_line = ft_strjoin(line, to_add);
 		ft_frees(NULL, line, to_add);
 		if (!new_line)
-			return (ft_frees(&buffer[fd], NULL, NULL));
+			return (ft_frees(&buffer, NULL, NULL));
 		line = new_line;
-		return (ft_extract_line(line, &buffer[fd]));
+		return (ft_extract_line(line, &buffer));
 	}
 	else
 	{
-		line = ft_read_line(fd, line, buffer[fd]);
+		line = ft_read_line(fd, line, buffer);
 		if (!line)
-			return (ft_frees(&buffer[fd], NULL, NULL));
-		return (ft_extract_line(line, &buffer[fd]));
+			return (ft_frees(&buffer, NULL, NULL));
+		return (ft_extract_line(line, &buffer));
 	}
 }
 
+/*
 #include <fcntl.h>
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-	int i;
-	int fd;
-	char *line;
+	int		i;
+	int		fd;
+	char	*line;
 
 	i = 0;
 	fd = open("test.txt", O_RDONLY);
-	while (i < 100)
+	while (i < 10)
 	{
 		line = get_next_line(fd);
 		printf("%s\n", line);
@@ -195,3 +207,4 @@ int main(void)
 		close(fd);
 	return (0);
 }
+*/
