@@ -12,7 +12,7 @@
 
 #include "get_next_line.h"
 
-static char	*ft_frees(char **buffer, char *line, char *temp)
+static char *ft_frees(char **buffer, char *line, char *temp)
 {
 	if (line)
 		free(line);
@@ -26,10 +26,10 @@ static char	*ft_frees(char **buffer, char *line, char *temp)
 	return (NULL);
 }
 
-static char	*ft_strdup(const char *src)
+static char *ft_strdup(const char *src)
 {
-	size_t			i;
-	unsigned char	*dest;
+	size_t i;
+	unsigned char *dest;
 
 	if (!src)
 		return (NULL);
@@ -49,11 +49,11 @@ static char	*ft_strdup(const char *src)
 	return ((char *)(dest));
 }
 
-static char	*ft_extract_line(char *line, char **buffer)
+static char *ft_extract_line(char *line, char **buffer)
 {
-	size_t	i;
-	char	*rest;
-	char	*temp;
+	size_t i;
+	char *rest;
+	char *temp;
 
 	if (!line)
 		return (NULL);
@@ -64,27 +64,34 @@ static char	*ft_extract_line(char *line, char **buffer)
 	{
 		temp = malloc(i + 2);
 		if (!temp)
-			return (ft_frees(buffer, line, NULL));
+		{
+			free(line);
+			return (NULL);
+		}
 		ft_strlcpy(temp, line, i + 2);
 		rest = ft_strdup(line + i + 1);
-		ft_frees(buffer, line, NULL);
+		free(line);
+		if (buffer && *buffer)
+			free(*buffer);
 		line = temp;
 		*buffer = rest;
 	}
 	else
 	{
-		if (buffer)
+		if (buffer && *buffer)
+		{
 			free(*buffer);
-		*buffer = NULL;
+			*buffer = NULL;
+		}
 		rest = NULL;
 	}
 	return (line);
 }
 
-static char	*ft_read_line(int fd, char *line, char *buffer)
+static char *ft_read_line(int fd, char *line, char *buffer)
 {
-	char	*temp_line;
-	ssize_t	bytes_read;
+	char *temp_line;
+	ssize_t bytes_read;
 
 	bytes_read = -1;
 	while (1)
@@ -93,20 +100,16 @@ static char	*ft_read_line(int fd, char *line, char *buffer)
 		if (bytes_read < 0)
 			return (free(line), NULL);
 		if (bytes_read == 0)
-			break ;
+			break;
 		buffer[bytes_read] = '\0';
 		temp_line = ft_strjoin(line, buffer);
 		if (!temp_line)
 			return (free(line), NULL);
 		if (line)
 			free(line);
-		//	line = ft_strdup(temp_line);
 		line = temp_line;
-		if (temp_line)
-			free(temp_line);
-		//	borrar ???
 		if (ft_strchr(line, '\n'))
-			break ;
+			break;
 	}
 	if (bytes_read == 0 && (!line || *line == '\0'))
 		return (free(line), NULL);
@@ -117,13 +120,13 @@ static char	*ft_read_line(int fd, char *line, char *buffer)
 	return (line);
 }
 
-char	*get_next_line(int fd)
+char *get_next_line(int fd)
 {
-	static char	*buffer[1024];
-	char		*line;
-	int			had_data;
-	char		*to_add;
-	char		*new_line;
+	static char *buffer[1024];
+	char *line;
+	int had_data;
+	char *to_add;
+	char *new_line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
@@ -173,11 +176,11 @@ char	*get_next_line(int fd)
 #include <fcntl.h>
 #include <stdio.h>
 
-int	main(void)
+int main(void)
 {
-	int		i;
-	int		fd;
-	char	*line;
+	int i;
+	int fd;
+	char *line;
 
 	i = 0;
 	fd = open("test.txt", O_RDONLY);
