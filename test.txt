@@ -1,812 +1,491 @@
-jmiguele@c1r13s1 ~/Cursus/gnl % paco
-╔══════════════════════════════════════════════════════════════════════════════╗
-║                Welcome to Francinette, a 42 tester framework!                ║
-╚═══════════════════════╦══════════════════════════════╦═══════════════════════╝
-                        ║         get_next_line        ║
-                        ╚══════════════════════════════╝
-✔ Preparing framework
-✖ Executing: norminette
-get_next_line.h: OK!
-get_next_line_bonus.h: OK!
-get_next_line_utils.c: OK!
-get_next_line.c: Error!
-Error: TOO_MANY_LINES       (line:  82, col:   1):	Function has more than 25 lines
-Error: TOO_MANY_LINES       (line: 112, col:   1):	Function has more than 25 lines
-Error: TOO_MANY_LINES       (line: 165, col:   1):	Function has more than 25 lines
-get_next_line_bonus.c: Error!
-Error: TOO_MANY_LINES       (line:  83, col:   1):	Function has more than 25 lines
-Error: TOO_MANY_LINES       (line: 113, col:   1):	Function has more than 25 lines
-Error: TOO_MANY_LINES       (line: 166, col:   1):	Function has more than 25 lines
-get_next_line_utils_bonus.c: OK!
-
-ℹ Running tests: gnlTester (https://github.com/Tripouille/gnlTester)
-[Mandatory]
-[BUFFER_SIZE = 1]: 
-Invalid fd: 1.OK 2.OK 3.OK 
-files/empty: 1.OK 2.OK 
-files/nl: 1.OK 2.OK 
-files/41_no_nl: 1.OK 2.OK 
-files/41_with_nl: 1.OK 2.OK 3.OK 
-files/42_no_nl: 1.OK 2.OK 
-files/42_with_nl: 1.OK 2.OK 3.OK 
-files/43_no_nl: 1.OK 2.OK 
-files/43_with_nl: 1.OK 2.OK 3.OK 
-files/multiple_nlx5: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
-files/multiple_line_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
-files/multiple_line_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
-files/alternate_line_nl_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
-files/alternate_line_nl_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
-files/big_line_no_nl: 1.OK 2.OK 
-files/big_line_with_nl: 1.OK 2.OK 
-stdin: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
-
-[BUFFER_SIZE = 42]: 
-Invalid fd: 1.OK 2.OK 3.OK 
-files/empty: 1.OK 2.OK 
-files/nl: 1.OK 2.OK 
-files/41_no_nl: 1.OK 2.OK 
-files/41_with_nl: 1.OK ==1355275== Invalid read of size 1
-==1355275==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1355275==    by 0x402E1A: gnl(int, char const*) (gnl.cpp:24)
-==1355275==    by 0x40593C: main (mandatory.cpp:50)
-==1355275==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==1355275== 
-2.SIGSEGV
-files/42_no_nl: 1.OK 2.OK 
-files/42_with_nl: 1.OK 2.OK 3.OK 
-files/43_no_nl: 1.OK 2.OK 
-files/43_with_nl: 1.OK ==1355279== Invalid read of size 1
-==1355279==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1355279==    by 0x402E1A: gnl(int, char const*) (gnl.cpp:24)
-==1355279==    by 0x406548: main (mandatory.cpp:77)
-==1355279==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==1355279== 
-2.SIGSEGV
-files/multiple_nlx5: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
-files/multiple_line_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
-files/multiple_line_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
-files/alternate_line_nl_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
-files/alternate_line_nl_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
-files/big_line_no_nl: 1.OK 2.OK 
-files/big_line_with_nl: 1.OK 2.OK 
-stdin: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
-
-[BUFFER_SIZE = 10000000]: 
-Invalid fd: 1.OK 2.OK 3.OK 
-files/empty: 1.OK 2.OK 
-files/nl: 1.OK 2.OK 
-files/41_no_nl: 1.OK 2.OK 
-files/41_with_nl: 1.OK ==1355311== Invalid read of size 1
-==1355311==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1355311==    by 0x402E1A: gnl(int, char const*) (gnl.cpp:24)
-==1355311==    by 0x40593C: main (mandatory.cpp:50)
-==1355311==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==1355311== 
-2.SIGSEGV
-files/42_no_nl: 1.OK 2.OK 
-files/42_with_nl: 1.OK ==1355313== Invalid read of size 1
-==1355313==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1355313==    by 0x402E1A: gnl(int, char const*) (gnl.cpp:24)
-==1355313==    by 0x405F24: main (mandatory.cpp:61)
-==1355313==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==1355313== 
-2.SIGSEGV
-files/43_no_nl: 1.OK 2.OK 
-files/43_with_nl: 1.OK ==1355315== Invalid read of size 1
-==1355315==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1355315==    by 0x402E1A: gnl(int, char const*) (gnl.cpp:24)
-==1355315==    by 0x406516: main (mandatory.cpp:77)
-==1355315==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==1355315== 
-2.SIGSEGV
-files/multiple_nlx5: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
-files/multiple_line_no_nl: 1.OK 2.OK 3.OK 4.OK ==1355317== Invalid read of size 1
-==1355317==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1355317==    by 0x402E1A: gnl(int, char const*) (gnl.cpp:24)
-==1355317==    by 0x406B7C: main (mandatory.cpp:92)
-==1355317==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==1355317== 
-5.SIGSEGV
-files/multiple_line_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
-files/alternate_line_nl_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK ==1355319== Invalid read of size 1
-==1355319==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1355319==    by 0x402E1A: gnl(int, char const*) (gnl.cpp:24)
-==1355319==    by 0x40722A: main (mandatory.cpp:110)
-==1355319==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==1355319== 
-9.SIGSEGV
-files/alternate_line_nl_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
-files/big_line_no_nl: 1.OK 2.OK 
-files/big_line_with_nl: 1.OK 2.OK 
-stdin: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
-
-[Static = 1]
-[Bonus]
-[BUFFER_SIZE = 1]: 
-Invalid fd: 1.OK 2.OK 3.OK 
-files/empty: 1.OK 2.OK 
-files/nl: 1.OK 2.OK 
-files/41_no_nl: 1.OK 2.OK 
-files/41_with_nl: 1.OK 2.OK 3.OK 
-files/42_no_nl: 1.OK 2.OK 
-files/42_with_nl: 1.OK 2.OK 3.OK 
-files/43_no_nl: 1.OK 2.OK 
-files/43_with_nl: 1.OK 2.OK 3.OK 
-files/multiple_nlx5: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
-files/multiple_line_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
-files/multiple_line_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
-files/alternate_line_nl_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
-files/alternate_line_nl_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
-files/big_line_no_nl: 1.OK 2.OK 
-files/big_line_with_nl: 1.OK 2.OK 
-stdin: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
-
-[BUFFER_SIZE = 42]: 
-Invalid fd: 1.OK 2.OK 3.OK 
-files/empty: 1.OK 2.OK 
-files/nl: 1.OK 2.OK 
-files/41_no_nl: 1.OK 2.OK 
-files/41_with_nl: 1.OK ==1355435== Invalid read of size 1
-==1355435==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1355435==    by 0x402E1A: gnl(int, char const*) (gnl.cpp:24)
-==1355435==    by 0x40593C: main (mandatory.cpp:50)
-==1355435==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==1355435== 
-2.SIGSEGV
-files/42_no_nl: 1.OK 2.OK 
-files/42_with_nl: 1.OK 2.OK 3.OK 
-files/43_no_nl: 1.OK 2.OK 
-files/43_with_nl: 1.OK ==1355439== Invalid read of size 1
-==1355439==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1355439==    by 0x402E1A: gnl(int, char const*) (gnl.cpp:24)
-==1355439==    by 0x406548: main (mandatory.cpp:77)
-==1355439==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==1355439== 
-2.SIGSEGV
-files/multiple_nlx5: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
-files/multiple_line_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
-files/multiple_line_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
-files/alternate_line_nl_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
-files/alternate_line_nl_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
-files/big_line_no_nl: 1.OK 2.OK 
-files/big_line_with_nl: 1.OK 2.OK 
-stdin: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
-
-[BUFFER_SIZE = 10000000]: 
-Invalid fd: 1.OK 2.OK 3.OK 
-files/empty: 1.OK 2.OK 
-files/nl: 1.OK 2.OK 
-files/41_no_nl: 1.OK 2.OK 
-files/41_with_nl: 1.OK ==1355467== Invalid read of size 1
-==1355467==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1355467==    by 0x402E1A: gnl(int, char const*) (gnl.cpp:24)
-==1355467==    by 0x40593C: main (mandatory.cpp:50)
-==1355467==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==1355467== 
-2.SIGSEGV
-files/42_no_nl: 1.OK 2.OK 
-files/42_with_nl: 1.OK ==1355469== Invalid read of size 1
-==1355469==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1355469==    by 0x402E1A: gnl(int, char const*) (gnl.cpp:24)
-==1355469==    by 0x405F24: main (mandatory.cpp:61)
-==1355469==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==1355469== 
-2.SIGSEGV
-files/43_no_nl: 1.OK 2.OK 
-files/43_with_nl: 1.OK ==1355472== Invalid read of size 1
-==1355472==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1355472==    by 0x402E1A: gnl(int, char const*) (gnl.cpp:24)
-==1355472==    by 0x406516: main (mandatory.cpp:77)
-==1355472==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==1355472== 
-2.SIGSEGV
-files/multiple_nlx5: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
-files/multiple_line_no_nl: 1.OK 2.OK 3.OK 4.OK ==1355474== Invalid read of size 1
-==1355474==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1355474==    by 0x402E1A: gnl(int, char const*) (gnl.cpp:24)
-==1355474==    by 0x406B7C: main (mandatory.cpp:92)
-==1355474==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==1355474== 
-5.SIGSEGV
-files/multiple_line_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 
-files/alternate_line_nl_no_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK ==1355476== Invalid read of size 1
-==1355476==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1355476==    by 0x402E1A: gnl(int, char const*) (gnl.cpp:24)
-==1355476==    by 0x40722A: main (mandatory.cpp:110)
-==1355476==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==1355476== 
-9.SIGSEGV
-files/alternate_line_nl_with_nl: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
-files/big_line_no_nl: 1.OK 2.OK 
-files/big_line_with_nl: 1.OK 2.OK 
-stdin: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 
-
-[BUFFER_SIZE = 1]: 
-multiple fd: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 18.OK 19.OK 
-[BUFFER_SIZE = 42]: 
-multiple fd: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK ==1355510== Invalid read of size 1
-==1355510==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1355510==    by 0x402DCA: gnl(int, char const*) (gnl.cpp:24)
-==1355510==    by 0x404D3F: main (bonus.cpp:43)
-==1355510==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==1355510== 
-8.SIGSEGV
-[BUFFER_SIZE = 10000000]: 
-multiple fd: 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK ==1355525== Invalid read of size 1
-==1355525==    at 0x484FBD4: strcmp (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1355525==    by 0x402DCA: gnl(int, char const*) (gnl.cpp:24)
-==1355525==    by 0x404D3F: main (bonus.cpp:43)
-==1355525==  Address 0x0 is not stack'd, malloc'd or (recently) free'd
-==1355525== 
-8.SIGSEGV
-
-To see the tests open: /home/jmiguele/francinette/tests/get_next_line/gnlTester/tests/mandatory.cpp
-and the bonus open: /home/jmiguele/francinette/tests/get_next_line/gnlTester/tests/bonus.cpp
-
-ℹ Running tests: fsoares (my own tests)
-BUFFER_SIZE: 1
-Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.OK 
-empty.txt           : 1.OK 2.OK 3_LEAKS.OK 
-1char.txt           : 1.OK 2.OK 3_LEAKS.OK 
-one_line_no_nl.txt  : 1.OK 2.OK 3_LEAKS.OK 
-only_nl.txt         : 1.OK 2.OK 3_LEAKS.OK 
-multiple_nl.txt     : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7_LEAKS.OK 
-variable_nls.txt    : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14_LEAKS.OK 
-lines_around_10.txt : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7_LEAKS.OK 
-read_error.txt      : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9_LEAKS.OK 
-stdin               : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7_LEAKS.OK 
-
-BUFFER_SIZE: 10
-Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.OK 
-empty.txt           : 1.OK 2.OK 3_LEAKS.OK 
-1char.txt           : 1.OK 2.OK 3_LEAKS.OK 
-one_line_no_nl.txt  : 1.OK 2.OK 3_LEAKS.OK 
-only_nl.txt         : 1.OK 2.OK 3_LEAKS.OK 
-multiple_nl.txt     : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7_LEAKS.OK 
-variable_nls.txt    : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14_LEAKS.OK 
-lines_around_10.txt : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7_LEAKS.OK 
-giant_line.txt      : 1.OK 2.OK 3_LEAKS.OK 
-giant_line_nl.txt   : 1.OK 2.OK 3.OK 4_LEAKS.OK 
-read_error.txt      : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9_LEAKS.OK 
-limits              : 1.OK 2.OK 3_LEAKS.OK 4.OK 5.OK 6_LEAKS.OK 7.OK 8.OK 9_LEAKS.OK 10.OK 11.OK 12_LEAKS.OK 13.OK 14.OK 15_LEAKS.OK 16.OK 17.OK 18_LEAKS.OK 19.OK 20.OK 21_LEAKS.OK 22.OK 23.OK 24_LEAKS.OK 25.OK 26.OK 27_LEAKS.OK 28.OK 29.OK 30_LEAKS.OK 31.OK 32.OK 33_LEAKS.OK 34.OK 35.OK 36_LEAKS.OK 37.OK 38.OK 39.OK 40_LEAKS.OK 41.OK 42.OK 43.OK 44_LEAKS.OK 45.OK 46.OK 47.OK 48_LEAKS.OK 49.OK 50.OK 51.OK 52_LEAKS.OK 53.OK 54.KO 55.OK 56_LEAKS.KO 57.OK 58.OK 59.OK 60_LEAKS.OK 
-Segmentation fault (core dumped)
-make: [Makefile:24: mandatory] Error 139 (ignored)
-BUFFER_SIZE: 1000000
-Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.OK 
-empty.txt           : 1.OK 2.OK 3_LEAKS.OK 
-1char.txt           : 1.OK 2.OK 3_LEAKS.OK 
-one_line_no_nl.txt  : 1.OK 2.OK 3_LEAKS.OK 
-only_nl.txt         : 1.OK 2.OK 3_LEAKS.OK 
-multiple_nl.txt     : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7_LEAKS.OK 
-variable_nls.txt    : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.KO 13.OK 14_LEAKS.KO 
-Segmentation fault (core dumped)
-make: [Makefile:25: mandatory] Error 139 (ignored)
-BONUS!
-BUFFER_SIZE: 1
-Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.OK 
-empty.txt           : 1.OK 2.OK 3_LEAKS.OK 
-1char.txt           : 1.OK 2.OK 3_LEAKS.OK 
-one_line_no_nl.txt  : 1.OK 2.OK 3_LEAKS.OK 
-only_nl.txt         : 1.OK 2.OK 3_LEAKS.OK 
-multiple_nl.txt     : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7_LEAKS.OK 
-variable_nls.txt    : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14_LEAKS.OK 
-lines_around_10.txt : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7_LEAKS.OK 
-read_error.txt      : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9_LEAKS.OK 
-stdin               : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7_LEAKS.OK 
-
-BUFFER_SIZE: 10
-Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.OK 
-empty.txt           : 1.OK 2.OK 3_LEAKS.OK 
-1char.txt           : 1.OK 2.OK 3_LEAKS.OK 
-one_line_no_nl.txt  : 1.OK 2.OK 3_LEAKS.OK 
-only_nl.txt         : 1.OK 2.OK 3_LEAKS.OK 
-multiple_nl.txt     : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7_LEAKS.OK 
-variable_nls.txt    : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14_LEAKS.OK 
-lines_around_10.txt : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7_LEAKS.OK 
-giant_line.txt      : 1.OK 2.OK 3_LEAKS.OK 
-giant_line_nl.txt   : 1.OK 2.OK 3.OK 4_LEAKS.OK 
-read_error.txt      : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9_LEAKS.OK 
-limits              : 1.OK 2.OK 3_LEAKS.OK 4.OK 5.OK 6_LEAKS.OK 7.OK 8.OK 9_LEAKS.OK 10.OK 11.OK 12_LEAKS.OK 13.OK 14.OK 15_LEAKS.OK 16.OK 17.OK 18_LEAKS.OK 19.OK 20.OK 21_LEAKS.OK 22.OK 23.OK 24_LEAKS.OK 25.OK 26.OK 27_LEAKS.OK 28.OK 29.OK 30_LEAKS.OK 31.OK 32.OK 33_LEAKS.OK 34.OK 35.OK 36_LEAKS.OK 37.OK 38.OK 39.OK 40_LEAKS.OK 41.OK 42.OK 43.OK 44_LEAKS.OK 45.OK 46.OK 47.OK 48_LEAKS.OK 49.OK 50.OK 51.OK 52_LEAKS.OK 53.OK 54.KO 55.OK 56_LEAKS.KO 57.OK 58.OK 59.OK 60_LEAKS.OK 
-Segmentation fault (core dumped)
-make: [Makefile:30: bonus] Error 139 (ignored)
-BUFFER_SIZE: 1000000
-Invalid fd          : 1.OK 2.OK 3.OK 4_LEAKS.OK 
-empty.txt           : 1.OK 2.OK 3_LEAKS.OK 
-1char.txt           : 1.OK 2.OK 3_LEAKS.OK 
-one_line_no_nl.txt  : 1.OK 2.OK 3_LEAKS.OK 
-only_nl.txt         : 1.OK 2.OK 3_LEAKS.OK 
-multiple_nl.txt     : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7_LEAKS.OK 
-variable_nls.txt    : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.KO 13.OK 14_LEAKS.KO 
-Segmentation fault (core dumped)
-make: [Makefile:31: bonus] Error 139 (ignored)
-BUFFER_SIZE: 1
-open, error, open   : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15_LEAKS.OK 
-2 file descriptors  : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13_LEAKS.OK 
-multiple fds        : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 18.OK 19.OK 20.OK 21.OK 22.OK 23_LEAKS.OK 
-
-BUFFER_SIZE: 10
-open, error, open   : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15_LEAKS.OK 
-2 file descriptors  : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13_LEAKS.OK 
-multiple fds        : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15.OK 16.OK 17.OK 18.OK 19.OK 20.OK 21.OK 22.OK 23_LEAKS.OK 
-
-BUFFER_SIZE: 1000000
-open, error, open   : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.OK 14.OK 15_LEAKS.OK 
-2 file descriptors  : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13_LEAKS.OK 
-multiple fds        : 1.OK 2.OK 3.OK 4.OK 5.OK 6.OK 7.OK 8.OK 9.OK 10.OK 11.OK 12.OK 13.KO 14.OK 15.OK 16.OK 17.OK 18.OK 19.OK 20.OK 21.OK 22.OK 23_LEAKS.KO 
-Segmentation fault (core dumped)
-make: [Makefile:34: bonus] Error 139 (ignored)
-Errors found:
-
-To see the tests open: /home/jmiguele/francinette/tests/get_next_line/fsoares/tester.c
-and the bonus open: /home/jmiguele/francinette/tests/get_next_line/fsoares/bonus.c
-
-
-Summary: 
-
-Norminette Errors: get_next_line.c, get_next_line_bonus.c
-
-Failed tests: gnlTester, fsoares
-jmiguele@c1r13s1 ~/Cursus/gnl % 
-jmiguele@c1r13s1 ~/Cursus/gnl % cat /home/jmiguele/francinette/tests/get_next_line/fsoares/tester.c
-#include "file_utils.h"
-#include "../get_next_line.h"
-
-void populate_expected(char *buffer, int n)
-{
-	int i = 0;
-	while(i < n)
-	{
-		i += sprintf(buffer + i, "0123456789");
-	}
-	buffer[n] = 0;
-}
-
-char *decode(char *buffer, char *result) {
-	int offset = 0;
-
-	while (*buffer)
-	{
-		if (*buffer >= '0' && *buffer <= '9') {
-			int size = atoi(buffer);
-			for (int i = 0; i < size; i++) {
-				result[offset] = (offset % 26) + 'a';
-				offset++;
-			}
-			while(*buffer >= '0' && *buffer <= '9') {
-				buffer++;
-			}
-		} else if (*buffer == '\n') {
-			result[offset++] = '\n';
-			buffer++;
-		} else {
-			fprintf(stderr, "Fix your shit");
-		}
-	}
-	result[offset] = 0;
-	return result;
-}
-
-int count_lines(char *str) {
-	int i = 0;
-	char *s = str;
-	while(s != NULL) {
-		s = strchr(s, '\n');
-		if (s != NULL)
-			s++;
-		i++;
-	}
-	if (str[strlen(str) - 1] == '\n')
-		i--;
-	return i;
-}
-
-char *get_line(char *s, int i) {
-	while(*s && i > 0) {
-		if (*s == '\n')
-			i--;
-		s++;
-	}
-	if (i > 0 || *s == 0) return NULL;
-	char *next = strchr(s, '\n');
-	if (next) {
-		char *res = calloc(next - s + 2, 1);
-		strncpy(res, s, next - s + 2);
-		res[next - s + 1] = 0;
-		return res;
-	} else {
-		return strdup(s);
-	}
-}
-
-int test_limit(char *encoding) {
-	int res = 1;
-	
-	char content[10000];
-	decode(encoding, content);
-	FILE * file = fopen("limits.txt", "w");
-	fprintf(file, "%s", content);
-	fclose(file);
-	reset_malloc_mock();
-	int fd = open("limits.txt", O_RDONLY);
-	int lines = count_lines(content) + 1;
-	for (int i = 0; i < lines; i++) {
-		char *expected = get_line(content, i);
-		res = test_gnl_func_limits(fd, expected, i, content, "limits.txt");
-		if (expected != NULL)
-			free(expected);
-	}
-	close(fd);
-	int no_leaks = leak_check();
-	no_leaks = null_check_gnl("limits.txt") && no_leaks;
-	if (!no_leaks) {
-		fprintf(errors_file, "for file:\n");
-		print_file_content(content);
-		fprintf(errors_file, "\n\n");
-	}
-	return res && no_leaks;
-}
-
-int main(int argn, char **argv)
-{
-	setup_framework(argn, argv);
-	printf(BMAG "BUFFER_SIZE" NC ": %i\n", BUFFER_SIZE);
-	TEST("Invalid fd", {
-		/* 1 */ test_gnl(-1, NULL);
-		/* 2 */ test_gnl(100, NULL);
-		int fd = open("empty.txt", O_RDONLY);
-		close(fd);
-		/* 3 */ test_gnl(fd, NULL);
-	});
-
-	TEST("empty.txt", {
-		int fd = open(_title, O_RDONLY);
-		/* 1 */ test_gnl(fd, NULL);
-		/* 2 */ test_gnl(fd, NULL);
-	});
-
-	TEST("1char.txt", {
-		int fd = open(_title, O_RDONLY);
-		/* 1 */ test_gnl(fd, "0");
-		/* 2 */ test_gnl(fd, NULL);
-	});
-
-	TEST("one_line_no_nl.txt", {
-		int fd = open(_title, O_RDONLY);
-		/* 1 */ test_gnl(fd, "abcdefghijklmnopqrstuvwxyz");
-		/* 2 */ test_gnl(fd, NULL);
-	});
-
-	TEST("only_nl.txt", {
-		int fd = open(_title, O_RDONLY);
-		/* 1 */ test_gnl(fd, "\n");
-		/* 2 */ test_gnl(fd, NULL);
-	});
-
-	TEST("multiple_nl.txt", {
-		int fd = open(_title, O_RDONLY);
-		/* 1 */ test_gnl(fd, "\n");
-		/* 2 */ test_gnl(fd, "\n");
-		/* 3 */ test_gnl(fd, "\n");
-		/* 4 */ test_gnl(fd, "\n");
-		/* 5 */ test_gnl(fd, "\n");
-		/* 6 */ test_gnl(fd, NULL);
-	});
-
-	TEST("variable_nls.txt", {
-		int fd = open(_title, O_RDONLY);
-		/* 1 */ test_gnl(fd, "\n");
-		/* 2 */ test_gnl(fd, "0123456789012345678901234567890123456789x2\n");
-		/* 3 */ test_gnl(fd, "0123456789012345678901234567890123456789x3\n");
-		/* 4 */ test_gnl(fd, "\n");
-		/* 5 */ test_gnl(fd, "0123456789012345678901234567890123456789x5\n");
-		/* 6 */ test_gnl(fd, "\n");
-		/* 7 */ test_gnl(fd, "\n");
-		/* 8 */ test_gnl(fd, "0123456789012345678901234567890123456789x8\n");
-		/* 9 */ test_gnl(fd, "\n");
-		/* 10 */ test_gnl(fd, "\n");
-		/* 11 */ test_gnl(fd, "\n");
-		/* 12 */ test_gnl(fd, "0123456789012345678901234567890123456789x12");
-		/* 13 */ test_gnl(fd, NULL);
-	});
-
-	TEST("lines_around_10.txt", {
-		int fd = open(_title, O_RDONLY);
-		/* 1 */ test_gnl(fd, "0123456789\n");
-		/* 2 */ test_gnl(fd, "012345678\n");
-		/* 3 */ test_gnl(fd, "90123456789\n");
-		/* 4 */ test_gnl(fd, "0123456789\n");
-		/* 5 */ test_gnl(fd, "xxxx\n");
-		/* 6 */ test_gnl(fd, NULL);
-	});
-
-	if (BUFFER_SIZE != 1) {
-		TEST("giant_line.txt", {
-			int fd = open(_title, O_RDONLY);
-			char expected[20000 + 1];
-			populate_expected(expected, 20000);
-			/* 1 */ test_gnl(fd, expected);
-			/* 2 */ test_gnl(fd, NULL);
-		});
-
-		TEST("giant_line_nl.txt", {
-			int fd = open(_title, O_RDONLY);
-			char expected[20000 + 2];
-			populate_expected(expected, 20000);
-			expected[20000] = '\n';
-			expected[20001] = 0;
-			/* 1 */ test_gnl(fd, expected);
-			/* 2 */ test_gnl(fd, "another line!!!");
-			/* 3 */ test_gnl(fd, NULL);
-		});
-	}
-
-	TEST("read_error.txt", {
-		char *name = "read_error.txt";
-		int fd = open(name, O_RDONLY);
-		/* 1 */ test_gnl(fd, "aaaaaaaaaa\n");
-		/* 2 */ test_gnl(fd, "bbbbbbbbbb\n");
-		// set the next read call to return -1
-		next_read_error = 1;
-		if (BUFFER_SIZE > 100) {
-			char *temp;
-			do {
-				temp = get_next_line(fd);
-				free(temp);
-			} while (temp != NULL);
-		}
-		/* 3 */ test_gnl(fd, NULL);
-		next_read_error = 0;
-		close(fd);
-		fd = open(name, O_RDONLY);
-		/* 4 */ test_gnl(fd, "aaaaaaaaaa\n");
-		/* 5 */ test_gnl(fd, "bbbbbbbbbb\n");
-		/* 6 */ test_gnl(fd, "cccccccccc\n");
-		/* 7 */ test_gnl(fd, "dddddddddd\n");
-		/* 8 */ test_gnl(fd, NULL);
-		if (res != 1) {
-			fprintf(errors_file, YEL "Probable reason" NC ": You should clear the static buffer when a call to read returns -1\n");
-		}
-	});
-
-	char *tests[18] = {"9", "9\n", "10", "10\n", "11", "11\n", "19", "19\n", "20", "20\n", "21", "21\n",
-		"9\n9\n", "9\n10", "9\n10\n",
-		"10\n8\n", "10\n9", "10\n9\n"
-	};
-
-	if (BUFFER_SIZE == 10) {
-		/*
-		 * This tests what happens when newlines are close to the BUFFER_SIZE.
-		 * 
-		 * For each of the strings defined in char *tests[18] above, it will create a file with what that string encodes. 
-		 * 
-		 * For example, if the string is: "10\n8\n" it will create a file with 10 chars, a newline, 8 chars and newline.
-		 * Then it will use that file as a test for the get_next_line function
-		 */
-		BASE_TEST("limits", {
-			for (int i = 0; i < 18; i++) {
-				res = test_limit(tests[i]) && res;
-			}
-		});
-	}
-
-	// The file being read is 'lines_around_10.txt'
-	TEST("stdin", {
-		int fd = STDIN_FILENO;
-		/* 1 */ test_gnl(fd, "0123456789\n");
-		/* 2 */ test_gnl(fd, "012345678\n");
-		/* 3 */ test_gnl(fd, "90123456789\n");
-		/* 4 */ test_gnl(fd, "0123456789\n");
-		/* 5 */ test_gnl(fd, "xxxx\n");
-		/* 6 */ test_gnl(fd, NULL);
-	});
-
-	printf("\n");
-}%                                                                                                                                                jmiguele@c1r13s1 ~/Cursus/gnl % cat /home/jmiguele/francinette/tests/get_next_line/fsoares/bonus.c
-#include "file_utils.h"
-#include "../get_next_line_bonus.h"
-#include <wchar.h>
-#include <locale.h>
-
-void populate_expected(char *buffer, int n)
-{
-	int i = 0;
-	while (i < n)
-	{
-		i += sprintf(buffer + i, "0123456789");
-	}
-	buffer[n] = 0;
-}
-
-char *__get_line(int line)
-{
-	switch (line)
-	{
-	case 0:
-		return "0123456789\n";
-	case 1:
-		return "012345678\n";
-	case 2:
-		return "90123456789\n";
-	case 3:
-		return "0123456789\n";
-	case 4:
-		return "xxxx\n";
-	default:
-		return NULL;
-	}
-}
-
-int main(int argn, char **argv)
-{
-	setup_framework(argn, argv);
-	printf(BMAG "BUFFER_SIZE" NC ": %i\n", BUFFER_SIZE);
-
-	TEST("open, error, open", {
-		char *name = "read_error.txt";
-		char *other = "lines_around_10.txt";
-		int fd = open(name, O_RDONLY);
-		int fd2 = open(other, O_RDONLY);
-		/* 1 */ test_gnl(fd, "aaaaaaaaaa\n");
-		/* 2 */ test_gnl(fd2, "0123456789\n");
-		/* 3 */ test_gnl(fd, "bbbbbbbbbb\n");
-		/* 4 */ test_gnl(fd2, "012345678\n");
-		// next read call will error out
-		next_read_error = 1;
-		if (BUFFER_SIZE > 100) {
-			char *temp;
-			do
-			{
-				temp = get_next_line(fd);
-				free(temp);
-			} while (temp != NULL);
-		}
-		/* 5 */ test_gnl(fd, NULL);
-		next_read_error = 0;
-		close(fd);
-		/* 6 */ test_gnl(fd2, "90123456789\n");
-		fd = open(name, O_RDONLY);
-		/* 7 */ test_gnl(fd, "aaaaaaaaaa\n");
-		/* 8 */ test_gnl(fd2, "0123456789\n");
-		/* 9 */ test_gnl(fd, "bbbbbbbbbb\n");
-		/* 10 */ test_gnl(fd, "cccccccccc\n");
-		/* 11 */ test_gnl(fd2, "xxxx\n");
-		/* 12 */ test_gnl(fd2, NULL);
-		/* 13 */ test_gnl(fd, "dddddddddd\n");
-		/* 14 */ test_gnl(fd, NULL);
-	});
-
-	TEST("2 file descriptors", {
-		char *name = "lines_around_10.txt";
-		int fd_1 = open(name, O_RDONLY);
-		int fd_2 = open(name, O_RDONLY);
-		/* 1 */ test_gnl(fd_1, "0123456789\n");
-		/* 2 */ test_gnl(fd_2, "0123456789\n");
-		/* 3 */ test_gnl(fd_1, "012345678\n");
-		/* 4 */ test_gnl(fd_2, "012345678\n");
-		/* 5 */ test_gnl(fd_2, "90123456789\n");
-		/* 6 */ test_gnl(fd_2, "0123456789\n");
-		/* 7 */ test_gnl(fd_2, "xxxx\n");
-		/* 8 */ test_gnl(fd_2, NULL);
-		/* 9 */ test_gnl(fd_1, "90123456789\n");
-		/* 10 */ test_gnl(fd_1, "0123456789\n");
-		/* 11 */ test_gnl(fd_1, "xxxx\n");
-		/* 12 */ test_gnl(fd_1, NULL);
-	});
-
-	TEST("multiple fds", {
-		char *name = "lines_around_10.txt";
-
-		char expected[20000 + 2];
-		populate_expected(expected, 20000);
-		expected[20000] = '\n';
-		expected[20001] = 0;
-
-		int fd_1 = open(name, O_RDONLY);
-		int fd_2 = open(name, O_RDONLY);
-		int fd_3 = open(name, O_RDONLY);
-		/* 1 */ test_gnl(fd_1, "0123456789\n");
-		/* 2 */ test_gnl(fd_2, "0123456789\n");
-		/* 3 */ test_gnl(fd_3, "0123456789\n");
-		/* 4 */ test_gnl(fd_1, "012345678\n");
-		/* 5 */ test_gnl(fd_2, "012345678\n");
-		/* 6 */ test_gnl(fd_2, "90123456789\n");
-
-		int fd_4 = open("giant_line_nl.txt", O_RDONLY);
-		/* 7 */ test_gnl(fd_2, "0123456789\n");
-		/* 8 */ test_gnl(fd_3, "012345678\n");
-		/* 9 */ test_gnl(fd_4, expected);
-		/* 10 */ test_gnl(fd_2, "xxxx\n");
-		/* 11 */ test_gnl(fd_2, NULL);
-		/* 12 */ test_gnl(fd_1, "90123456789\n");
-		/* 13 */ test_gnl(fd_4, "another line!!!");
-		/* 14 */ test_gnl(fd_1, "0123456789\n");
-		/* 15 */ test_gnl(fd_4, NULL);
-		/* 16 */ test_gnl(fd_1, "xxxx\n");
-		/* 17 */ test_gnl(fd_4, NULL);
-		/* 18 */ test_gnl(fd_3, "90123456789\n");
-		/* 19 */ test_gnl(fd_3, "0123456789\n");
-		/* 20 */ test_gnl(fd_1, NULL);
-		/* 21 */ test_gnl(fd_3, "xxxx\n");
-		/* 22 */ test_gnl(fd_3, NULL);
-	});
-
-#ifdef STRICT_MEM
-
-	if (BUFFER_SIZE != 10) {
-		printf("\n");
-		return 0;
-	}
-
-	wchar_t symbols[10] = {0x280B, 0x2819, 0x281A, 0x281E, 0x2816,
-						   0x2826, 0x2834, 0x2832, 0x2833, 0x2813};
-
-	g_test = 1;
-	alarm(TIMEOUT * 10);
-	char *_title = "test limit fds";
-	printf(BLU "%-20s" NC ": ", _title);
-	fflush(stdout);
-	int res = 1;
-	errors_file = fopen("errors.log", "w");
-
-	int fds[10000] = {0};
-	int start = -1;
-	int end = -1;
-	int fd;
-	int cid = fork();
-	if (cid == 0)
-	{
-		int i = 0;
-		setlocale(LC_CTYPE, "");
-		printf(BWHT " ");
-		while (1)
-		{
-			wprintf(L"\b%lc", symbols[i]);
-			fflush(stdout);
-			usleep(100000);
-			i = (i + 1) % 10;
-		}
-	}
-	else
-	{
-		child_pid = cid;
-		do
-		{
-			fd = open("lines_around_10.txt", O_RDONLY);
-			if (start == -1 && fd != -1)
-				start = fd;
-			if (fd != -1)
-				end = fd;
-			if (end != -1 && fd == -1) {
-				close(end);
-				end = end - 1;
-			}
-		} while (fd != -1 && fd < 1000);
-
-		fd = start;
-		while (fd <= end && res)
-		{
-			res = silent_gnl_test(fd, __get_line(fds[fd])) && res;
-			fds[fd]++;
-			fd++;
-		}
-		if (res) {
-			printf("\b" NC "Read all fds: " GRN "OK!" BWHT "  ");
-			fflush(stdout);
-		}
-		fd = start;
-		while (fd <= end)
-		{
-			close(fd);
-			fd++;
-		}
-		kill(cid, SIGKILL);
-		child_pid = -1;
-		usleep(200000);
-		printf("\b" NC "\n");
-		fflush(stdout);
-	}
-	fclose(errors_file);
-#endif
-
-	printf("\n");
-}
+==462430== 
+==462430== HEAP SUMMARY:
+==462430==     in use at exit: 11 bytes in 1 blocks
+==462430==   total heap usage: 593 allocs, 711 frees, 29,152 bytes allocated
+==462430== 
+==462430== LEAK SUMMARY:
+==462430==    definitely lost: 0 bytes in 0 blocks
+==462430==    indirectly lost: 0 bytes in 0 blocks
+==462430==      possibly lost: 0 bytes in 0 blocks
+==462430==    still reachable: 11 bytes in 1 blocks
+==462430==         suppressed: 0 bytes in 0 blocks
+==462430== Reachable blocks (those to which a pointer was found) are not shown.
+==462430== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==462430== 
+==462430== ERROR SUMMARY: 43299 errors from 25 contexts (suppressed: 0 from 0)
+==462430== 
+==462430== 2 errors in context 1 of 25:
+==462430== Invalid free() / delete / delete[] / realloc()
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401597: ft_frees (get_next_line.c:18)
+==462430==    by 0x4016F5: ft_extract_line (get_next_line.c:70)
+==462430==    by 0x401480: get_next_line (get_next_line.c:169)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e0b0 is 0 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 2 errors in context 2 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x401678: ft_extract_line (get_next_line.c:63)
+==462430==    by 0x401480: get_next_line (get_next_line.c:169)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e0d4 is 36 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 23 errors in context 3 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x40152E: ft_strdup (get_next_line.c:45)
+==462430==    by 0x4016E0: ft_extract_line (get_next_line.c:69)
+==462430==    by 0x401480: get_next_line (get_next_line.c:169)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e0d5 is 37 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 25 errors in context 4 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x40151C: ft_strdup (get_next_line.c:43)
+==462430==    by 0x4016E0: ft_extract_line (get_next_line.c:69)
+==462430==    by 0x401480: get_next_line (get_next_line.c:169)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e0d5 is 37 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 25 errors in context 5 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x4014C4: ft_strdup (get_next_line.c:37)
+==462430==    by 0x4016E0: ft_extract_line (get_next_line.c:69)
+==462430==    by 0x401480: get_next_line (get_next_line.c:169)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e0d5 is 37 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 43 errors in context 6 of 25:
+==462430== Invalid free() / delete / delete[] / realloc()
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401802: ft_read_line (get_next_line.c:102)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e6e0 is 0 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 43 errors in context 7 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x4019A1: ft_strchr (get_next_line_utils.c:28)
+==462430==    by 0x40182C: ft_read_line (get_next_line.c:108)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e70a is 42 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 59 errors in context 8 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x401642: ft_extract_line (get_next_line.c:61)
+==462430==    by 0x401480: get_next_line (get_next_line.c:169)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e0b0 is 0 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 61 errors in context 9 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x401AAC: ft_strlcpy (get_next_line_utils.c:52)
+==462430==    by 0x4016CF: ft_extract_line (get_next_line.c:68)
+==462430==    by 0x401480: get_next_line (get_next_line.c:169)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e0b0 is 0 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 61 errors in context 10 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x401628: ft_extract_line (get_next_line.c:61)
+==462430==    by 0x401480: get_next_line (get_next_line.c:169)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e0b0 is 0 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 61 errors in context 11 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x401965: ft_strchr (get_next_line_utils.c:24)
+==462430==    by 0x40182C: ft_read_line (get_next_line.c:108)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e0b0 is 0 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 61 errors in context 12 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x401953: ft_strchr (get_next_line_utils.c:22)
+==462430==    by 0x40182C: ft_read_line (get_next_line.c:108)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e0b0 is 0 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 63 errors in context 13 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x401A6D: ft_strlcpy (get_next_line_utils.c:50)
+==462430==    by 0x4016CF: ft_extract_line (get_next_line.c:68)
+==462430==    by 0x401480: get_next_line (get_next_line.c:169)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e0b0 is 0 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 74 errors in context 14 of 25:
+==462430== Invalid free() / delete / delete[] / realloc()
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x4015AB: ft_frees (get_next_line.c:20)
+==462430==    by 0x4013AD: get_next_line (get_next_line.c:158)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9eac0 is 0 bytes inside a block of size 253 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 86 errors in context 15 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x401A2A: ft_strlcpy (get_next_line_utils.c:45)
+==462430==    by 0x4016CF: ft_extract_line (get_next_line.c:68)
+==462430==    by 0x401480: get_next_line (get_next_line.c:169)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e0b0 is 0 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401429: get_next_line (get_next_line.c:166)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 2730 errors in context 16 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x401AAC: ft_strlcpy (get_next_line_utils.c:52)
+==462430==    by 0x401BE8: ft_strjoin (get_next_line_utils.c:75)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e6e0 is 0 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 2773 errors in context 17 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x401A6D: ft_strlcpy (get_next_line_utils.c:50)
+==462430==    by 0x401BE8: ft_strjoin (get_next_line_utils.c:75)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e6e0 is 0 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 2773 errors in context 18 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x401A2A: ft_strlcpy (get_next_line_utils.c:45)
+==462430==    by 0x401BE8: ft_strjoin (get_next_line_utils.c:75)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e6e0 is 0 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 2773 errors in context 19 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x401B20: ft_strjoin (get_next_line_utils.c:66)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e6e0 is 0 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 4914 errors in context 20 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x401AAC: ft_strlcpy (get_next_line_utils.c:52)
+==462430==    by 0x401C18: ft_strjoin (get_next_line_utils.c:79)
+==462430==    by 0x401398: get_next_line (get_next_line.c:157)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9eac0 is 0 bytes inside a block of size 253 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 4988 errors in context 21 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x401A6D: ft_strlcpy (get_next_line_utils.c:50)
+==462430==    by 0x401C18: ft_strjoin (get_next_line_utils.c:79)
+==462430==    by 0x401398: get_next_line (get_next_line.c:157)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9eac0 is 0 bytes inside a block of size 253 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 4988 errors in context 22 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x401A2A: ft_strlcpy (get_next_line_utils.c:45)
+==462430==    by 0x401C18: ft_strjoin (get_next_line_utils.c:79)
+==462430==    by 0x401398: get_next_line (get_next_line.c:157)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9eac0 is 0 bytes inside a block of size 253 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 4988 errors in context 23 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x401B6E: ft_strjoin (get_next_line_utils.c:69)
+==462430==    by 0x401398: get_next_line (get_next_line.c:157)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9eac0 is 0 bytes inside a block of size 253 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 5820 errors in context 24 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x401965: ft_strchr (get_next_line_utils.c:24)
+==462430==    by 0x40182C: ft_read_line (get_next_line.c:108)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e6e0 is 0 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== 
+==462430== 5863 errors in context 25 of 25:
+==462430== Invalid read of size 1
+==462430==    at 0x401953: ft_strchr (get_next_line_utils.c:22)
+==462430==    by 0x40182C: ft_read_line (get_next_line.c:108)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Address 0x4a9e6e0 is 0 bytes inside a block of size 43 free'd
+==462430==    at 0x484B27F: free (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x40181E: ft_read_line (get_next_line.c:106)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430==  Block was alloc'd at
+==462430==    at 0x4848899: malloc (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==462430==    by 0x401BAC: ft_strjoin (get_next_line_utils.c:71)
+==462430==    by 0x4017C9: ft_read_line (get_next_line.c:98)
+==462430==    by 0x401351: get_next_line (get_next_line.c:154)
+==462430==    by 0x4018CD: main (get_next_line.c:186)
+==462430== 
+==462430== ERROR SUMMARY: 43299 errors from 25 contexts (suppressed: 0 from 0)
