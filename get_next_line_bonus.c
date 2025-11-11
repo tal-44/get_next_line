@@ -10,10 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-#include <stdio.h>
+#include "get_next_line_bonus.h"
 
-static char *ft_frees(char **buffer, int fd, char *line, char *temp)
+static char	*ft_frees(char **buffer, int fd, char *line, char *temp)
 {
 	if (line)
 		free(line);
@@ -27,10 +26,10 @@ static char *ft_frees(char **buffer, int fd, char *line, char *temp)
 	return (NULL);
 }
 
-char *ft_strdup(const char *src)
+char	*ft_strdup(const char *src)
 {
-	size_t i;
-	unsigned char *dest;
+	size_t			i;
+	unsigned char	*dest;
 
 	if (!src)
 		return (NULL);
@@ -50,15 +49,15 @@ char *ft_strdup(const char *src)
 	return ((char *)(dest));
 }
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
-	static char *stash[1024];
-	char *line;
-	char *temp;
-	char buffer[BUFFER_SIZE + 1];
-	int bytes;
-	char *newline_pos;
-	size_t line_len;
+	static char	*stash[1024];
+	char		*line;
+	char		*temp;
+	char		buffer[BUFFER_SIZE + 1];
+	int			bytes;
+	char		*newline_pos;
+	size_t		line_len;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
@@ -86,7 +85,6 @@ char *get_next_line(int fd)
 	if (newline_pos)
 	{
 		line_len = newline_pos - stash[fd] + 1;
-		// distancia entre el inicio de stash[fd] y la posicion del salto de linea + 1
 		line = ft_substr(stash[fd], 0, line_len);
 		if (!line)
 			return (ft_frees(stash, fd, NULL, NULL));
@@ -109,7 +107,7 @@ char *get_next_line(int fd)
 	}
 	return (line);
 }
-
+/*
 #include <fcntl.h>
 #include <stdio.h>
 
@@ -131,3 +129,4 @@ int main(void)
 		close(fd);
 	return (0);
 }
+*/

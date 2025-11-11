@@ -12,9 +12,9 @@
 
 #include "get_next_line_bonus.h"
 
-int ft_strlen(const char *s)
+int	ft_strlen(const char *s)
 {
-	size_t i;
+	size_t	i;
 
 	if (!s)
 		return (0);
@@ -24,15 +24,18 @@ int ft_strlen(const char *s)
 	return (i);
 }
 
-char *ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char *str;
-	size_t i;
+	char	*str;
+	size_t	i;
 
 	if (!s)
 		return (NULL);
 	if (start >= ft_strlen(s))
-		return (str = ft_strdup(""));
+	{
+		str = ft_strdup("");
+		return (str);
+	}
 	if (len > ft_strlen(s) - start)
 		str = malloc((ft_strlen(s) - start + 1) * sizeof(char));
 	else
@@ -51,9 +54,9 @@ char *ft_substr(char const *s, unsigned int start, size_t len)
 
 char *ft_strjoin(char const *s1, char const *s2)
 {
-	char *str;
-	size_t len1;
-	size_t len2;
+	char	*str;
+	size_t	len1;
+	size_t	len2;
 
 	len1 = 0;
 	while (s1 && s1[len1])
@@ -75,9 +78,9 @@ char *ft_strjoin(char const *s1, char const *s2)
 	return (str);
 }
 
-char *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-	size_t i;
+	size_t	i;
 
 	if (!s)
 		return (NULL);

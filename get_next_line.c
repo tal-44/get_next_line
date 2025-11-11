@@ -12,18 +12,12 @@
 
 #include "get_next_line.h"
 
-static char	*ft_frees(char **buffer, char *line, char *temp)
+static char *ft_frees(char **buffer, char *line, char *temp)
 {
 	if (line)
-	{
 		free(line);
-		line = NULL;
-	}
 	if (temp)
-	{
 		free(temp);
-		temp = NULL;
-	}
 	if (buffer && *buffer)
 	{
 		free(*buffer);
@@ -70,22 +64,19 @@ static char	*ft_extract_line(char *line, char **buffer)
 	{
 		temp = malloc(i + 2);
 		if (!temp)
-		{
-			free(line);
-			line = NULL;
-			return (NULL);
-		}
+			return (free(line), NULL);
 		ft_strlcpy(temp, line, i + 2);
-		// r   substr?
 		rest = ft_strdup(line + i + 1);
 		free(line);
+		if (!rest)
+			return (free(temp), NULL);
 		if (buffer && *buffer)
 		{
 			free(*buffer);
 			*buffer = NULL;
 		}
-		line = temp;
 		*buffer = rest;
+		return (temp);
 	}
 	else
 	{
@@ -94,7 +85,6 @@ static char	*ft_extract_line(char *line, char **buffer)
 			free(*buffer);
 			*buffer = NULL;
 		}
-		rest = NULL;
 	}
 	return (line);
 }
@@ -111,7 +101,7 @@ static char	*ft_read_line(int fd, char *line, char *buffer)
 		if (bytes_read < 0)
 			return (free(line), NULL);
 		if (bytes_read == 0)
-			break ;
+			break;
 		buffer[bytes_read] = '\0';
 		temp_line = ft_strjoin(line, buffer);
 		if (!temp_line)
@@ -120,7 +110,7 @@ static char	*ft_read_line(int fd, char *line, char *buffer)
 			free(line);
 		line = temp_line;
 		if (ft_strchr(line, '\n'))
-			break ;
+			break;
 	}
 	if (bytes_read == 0 && (!line || *line == '\0'))
 		return (free(line), NULL);
@@ -149,7 +139,7 @@ char	*get_next_line(int fd)
 	{
 		line = ft_strdup(buffer);
 		if (!line)
-			return (ft_frees(&buffer, line, NULL));
+			return (ft_frees(&buffer, NULL, NULL));
 		had_data = (line && line[0] != '\0');
 		if (buffer)
 		{
@@ -158,7 +148,10 @@ char	*get_next_line(int fd)
 		}
 		buffer = malloc((BUFFER_SIZE + 1) * sizeof(char));
 		if (!buffer)
-			return (ft_frees(&buffer, line, NULL));
+		{
+			free(line);
+			return (NULL);
+		}
 		buffer[0] = '\0';
 	}
 	if (ft_strchr(line, '\n'))
