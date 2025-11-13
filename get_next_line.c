@@ -6,13 +6,13 @@
 /*   By: jmiguele <jmiguele@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 09:37:48 by jmiguele          #+#    #+#             */
-/*   Updated: 2025/11/13 12:15:08 by jmiguele         ###   ########.fr       */
+/*   Updated: 2025/11/13 14:05:45 by jmiguele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static char *ft_frees(char **stash, int fd, char *line, char *temp)
+static char	*ft_frees(char **stash, int fd, char *line, char *temp)
 {
 	if (line)
 	{
@@ -32,10 +32,10 @@ static char *ft_frees(char **stash, int fd, char *line, char *temp)
 	return (NULL);
 }
 
-char *ft_strdup(const char *src)
+char	*ft_strdup(const char *src)
 {
-	size_t i;
-	unsigned char *dest;
+	size_t			i;
+	unsigned char	*dest;
 
 	if (!src)
 		return (NULL);
@@ -55,15 +55,15 @@ char *ft_strdup(const char *src)
 	return ((char *)(dest));
 }
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
-	static char *stash[1024];
-	char *line;
-	char *temp;
-	char *buffer;
-	int bytes;
-	char *newline_pos;
-	size_t line_len;
+	static char	*stash[1024];
+	char		*line;
+	char		*temp;
+	char		*buffer;
+	int			bytes;
+	char		*newline_pos;
+	size_t		line_len;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
@@ -80,7 +80,7 @@ char *get_next_line(int fd)
 		if (bytes < 0)
 			return (ft_frees(stash, fd, NULL, buffer));
 		if (bytes == 0)
-			break;
+			break ;
 		buffer[bytes] = '\0';
 		temp = ft_strjoin(stash[fd], buffer);
 		if (!temp)
@@ -93,29 +93,27 @@ char *get_next_line(int fd)
 	newline_pos = ft_strchr(stash[fd], '\n');
 	if (newline_pos)
 	{
-		if (stash[fd][0] != '\n')
-		{
-			ft_frees(stash, fd, NULL, buffer);
-			return ("/n");
-		}
 		line_len = newline_pos - stash[fd] + 1;
 		line = ft_substr(stash[fd], 0, line_len);
 		if (!line)
 			return (ft_frees(stash, fd, NULL, buffer));
 		temp = ft_strdup(newline_pos + 1);
 		if (!temp)
-		{
-			free(line);
-			return (ft_frees(stash, fd, NULL, buffer));
-		}
+			return (ft_frees(stash, fd, line, buffer));
 		free(stash[fd]);
 		stash[fd] = temp;
 	}
 	else
 	{
-		line = ft_strdup(stash[fd]);
-		if (!line)
-			return (ft_frees(stash, fd, NULL, buffer));
+		// ???   Si llamo a la funcion despues de haber acabado.
+		if (stash[fd])
+		{
+			line = ft_strdup(stash[fd]);
+			if (!line)
+				return (ft_frees(stash, fd, NULL, buffer));
+		}
+		else
+			return (ft_frees(NULL, 0, NULL, buffer));
 		free(stash[fd]);
 		stash[fd] = NULL;
 	}
@@ -127,7 +125,7 @@ char *get_next_line(int fd)
 #include <fcntl.h>
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
 	int i;
 	int fd;
@@ -135,13 +133,17 @@ int main(void)
 
 	i = 0;
 	fd = open("test.txt", O_RDONLY);
-	while (i < 150)
+	/*while ((line = get_next_line(NULL)))
 	{
-		line = get_next_line(fd);
-		printf("%s\n", line);
+		printf("[%s]", line);
 		free(line);
 		i++;
-	}
+	}*/
+	line = get_next_line(fd);
+	printf("[%s]", line);
+	line = get_next_line(fd);
+	printf("[%s]", line);
+	free(line);
 	if (fd >= 0)
 		close(fd);
 	return (0);
