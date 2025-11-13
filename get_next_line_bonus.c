@@ -65,7 +65,7 @@ char *get_next_line(int fd)
 	char *newline_pos;
 	size_t line_len;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || fd >= 1024)
 		return (NULL);
 	buffer = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buffer)
@@ -78,7 +78,7 @@ char *get_next_line(int fd)
 		buffer[bytes] = '\0';
 		stash[fd] = ft_strdup(buffer);
 		if (!stash[fd])
-			return (ft_frees(NULL, 0, NULL, buffer));	
+			return (ft_frees(NULL, 0, NULL, buffer));
 	}
 	while (!ft_strchr(stash[fd], '\n'))
 	{
@@ -138,14 +138,15 @@ int main(void)
 		printf("[%s]", line);
 		free(line);
 		i++;
-	}*//*
-	line = get_next_line(fd);
-	printf("[%s]", line);
-	line = get_next_line(fd);
-	printf("[%s]", line);
-	free(line);
-	if (fd >= 0)
-		close(fd);
-	return (0);
+	}*/
+/*
+line = get_next_line(fd);
+printf("[%s]", line);
+line = get_next_line(fd);
+printf("[%s]", line);
+free(line);
+if (fd >= 0)
+ close(fd);
+return (0);
 }
 */
