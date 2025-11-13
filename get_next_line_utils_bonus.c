@@ -6,13 +6,13 @@
 /*   By: jmiguele <jmiguele@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 12:51:53 by jmiguele          #+#    #+#             */
-/*   Updated: 2025/11/07 10:51:56 by jmiguele         ###   ########.fr       */
+/*   Updated: 2025/11/13 09:49:53 by jmiguele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-int	ft_strlen(const char *s)
+unsigned int	ft_strlen(const char *s)
 {
 	size_t	i;
 
@@ -52,7 +52,23 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (str);
 }
 
-char *ft_strjoin(char const *s1, char const *s2)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+{
+	size_t	i;
+
+	i = 0;
+	if (size == 0)
+		return (ft_strlen(src));
+	while (src[i] && i < size - 1)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (ft_strlen(src));
+}
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*str;
 	size_t	len1;
