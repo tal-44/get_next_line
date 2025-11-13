@@ -6,13 +6,13 @@
 /*   By: jmiguele <jmiguele@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 09:37:48 by jmiguele          #+#    #+#             */
-/*   Updated: 2025/11/13 09:56:41 by jmiguele         ###   ########.fr       */
+/*   Updated: 2025/11/13 12:15:08 by jmiguele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static char *ft_frees(char **stash, int fd, char *line, char *temp)
+static char	*ft_frees(char **stash, int fd, char *line, char *temp)
 {
 	if (line)
 	{
@@ -32,10 +32,10 @@ static char *ft_frees(char **stash, int fd, char *line, char *temp)
 	return (NULL);
 }
 
-char *ft_strdup(const char *src)
+char	*ft_strdup(const char *src)
 {
-	size_t i;
-	unsigned char *dest;
+	size_t			i;
+	unsigned char	*dest;
 
 	if (!src)
 		return (NULL);
@@ -55,15 +55,15 @@ char *ft_strdup(const char *src)
 	return ((char *)(dest));
 }
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
-	static char *stash[1024];
-	char *line;
-	char *temp;
-	char *buffer;
-	int bytes;
-	char *newline_pos;
-	size_t line_len;
+	static char	*stash[1024];
+	char		*line;
+	char		*temp;
+	char		*buffer;
+	int			bytes;
+	char		*newline_pos;
+	size_t		line_len;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
@@ -73,14 +73,14 @@ char *get_next_line(int fd)
 	if (!stash[fd])
 		stash[fd] = ft_strdup("");
 	if (!stash[fd])
-		return (free(buffer), (NULL));
+		return (ft_frees(NULL, 0, NULL, buffer));
 	while (!ft_strchr(stash[fd], '\n'))
 	{
 		bytes = read(fd, buffer, BUFFER_SIZE);
 		if (bytes < 0)
 			return (ft_frees(stash, fd, NULL, buffer));
 		if (bytes == 0)
-			break;
+			break ;
 		buffer[bytes] = '\0';
 		temp = ft_strjoin(stash[fd], buffer);
 		if (!temp)
@@ -115,9 +115,9 @@ char *get_next_line(int fd)
 		stash[fd] = NULL;
 	}
 	free(buffer);
+	buffer = NULL;
 	return (line);
 }
-
 /*
 #include <fcntl.h>
 #include <stdio.h>
