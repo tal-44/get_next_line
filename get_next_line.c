@@ -12,7 +12,7 @@
 
 #include "get_next_line.h"
 
-static char	*ft_frees(char **stash, int fd, char *line, char *temp)
+static char *ft_frees(char **stash, int fd, char *line, char *temp)
 {
 	if (line)
 	{
@@ -32,10 +32,10 @@ static char	*ft_frees(char **stash, int fd, char *line, char *temp)
 	return (NULL);
 }
 
-char	*ft_strdup(const char *src)
+char *ft_strdup(const char *src)
 {
-	size_t			i;
-	unsigned char	*dest;
+	size_t i;
+	unsigned char *dest;
 
 	if (!src)
 		return (NULL);
@@ -55,15 +55,15 @@ char	*ft_strdup(const char *src)
 	return ((char *)(dest));
 }
 
-char	*get_next_line(int fd)
+char *get_next_line(int fd)
 {
-	static char	*stash[1024];
-	char		*line;
-	char		*temp;
-	char		*buffer;
-	int			bytes;
-	char		*newline_pos;
-	size_t		line_len;
+	static char *stash[1024];
+	char *line;
+	char *temp;
+	char *buffer;
+	int bytes;
+	char *newline_pos;
+	size_t line_len;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
@@ -71,16 +71,22 @@ char	*get_next_line(int fd)
 	if (!buffer)
 		return (NULL);
 	if (!stash[fd])
-		stash[fd] = ft_strdup("");
-	if (!stash[fd])
-		return (ft_frees(NULL, 0, NULL, buffer));
+	{
+		bytes = read(fd, buffer, BUFFER_SIZE);
+		if (bytes <= 0)
+			return (ft_frees(NULL, 0, NULL, buffer));
+		buffer[bytes] = '\0';
+		stash[fd] = ft_strdup(buffer);
+		if (!stash[fd])
+			return (ft_frees(NULL, 0, NULL, buffer));	
+	}
 	while (!ft_strchr(stash[fd], '\n'))
 	{
 		bytes = read(fd, buffer, BUFFER_SIZE);
 		if (bytes < 0)
 			return (ft_frees(stash, fd, NULL, buffer));
 		if (bytes == 0)
-			break ;
+			break;
 		buffer[bytes] = '\0';
 		temp = ft_strjoin(stash[fd], buffer);
 		if (!temp)
@@ -105,15 +111,9 @@ char	*get_next_line(int fd)
 	}
 	else
 	{
-		// ???   Si llamo a la funcion despues de haber acabado.
-		if (stash[fd])
-		{
-			line = ft_strdup(stash[fd]);
-			if (!line)
-				return (ft_frees(stash, fd, NULL, buffer));
-		}
-		else
-			return (ft_frees(NULL, 0, NULL, buffer));
+		line = ft_strdup(stash[fd]);
+		if (!line)
+			return (ft_frees(stash, fd, NULL, buffer));
 		free(stash[fd]);
 		stash[fd] = NULL;
 	}
@@ -125,7 +125,7 @@ char	*get_next_line(int fd)
 #include <fcntl.h>
 #include <stdio.h>
 
-int	main(void)
+int main(void)
 {
 	int i;
 	int fd;
