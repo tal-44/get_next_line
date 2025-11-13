@@ -121,7 +121,7 @@ char *get_next_line(int fd)
 	buffer = NULL;
 	return (line);
 }
-
+/*
 #include <fcntl.h>
 #include <stdio.h>
 
@@ -138,7 +138,7 @@ int main(void)
 		printf("[%s]", line);
 		free(line);
 		i++;
-	}*/
+	}*//*
 	line = get_next_line(fd);
 	printf("[%s]", line);
 	line = get_next_line(fd);
@@ -148,3 +148,4 @@ int main(void)
 		close(fd);
 	return (0);
 }
+*/
