@@ -6,13 +6,13 @@
 /*   By: jmiguele <jmiguele@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 09:37:48 by jmiguele          #+#    #+#             */
-/*   Updated: 2025/11/13 13:03:28 by jmiguele         ###   ########.fr       */
+/*   Updated: 2025/11/14 09:29:02 by jmiguele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-static char *ft_frees(char **stash, int fd, char *line, char *temp)
+static char	*ft_frees(char **stash, int fd, char *line, char *temp)
 {
 	if (line)
 	{
@@ -32,10 +32,10 @@ static char *ft_frees(char **stash, int fd, char *line, char *temp)
 	return (NULL);
 }
 
-char *ft_strdup(const char *src)
+char	*ft_strdup(const char *src)
 {
-	size_t i;
-	unsigned char *dest;
+	size_t			i;
+	unsigned char	*dest;
 
 	if (!src)
 		return (NULL);
@@ -55,15 +55,15 @@ char *ft_strdup(const char *src)
 	return ((char *)(dest));
 }
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
-	static char *stash[1024];
-	char *line;
-	char *temp;
-	char *buffer;
-	int bytes;
-	char *newline_pos;
-	size_t line_len;
+	static char	*stash[1024];
+	char		*line;
+	char		*temp;
+	char		*buffer;
+	int			bytes;
+	char		*newline_pos;
+	size_t		line_len;
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || fd >= 1024)
 		return (NULL);
@@ -86,7 +86,7 @@ char *get_next_line(int fd)
 		if (bytes < 0)
 			return (ft_frees(stash, fd, NULL, buffer));
 		if (bytes == 0)
-			break;
+			break ;
 		buffer[bytes] = '\0';
 		temp = ft_strjoin(stash[fd], buffer);
 		if (!temp)
@@ -121,32 +121,27 @@ char *get_next_line(int fd)
 	buffer = NULL;
 	return (line);
 }
+
 /*
+
 #include <fcntl.h>
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-	int i;
-	int fd;
-	char *line;
+	int		i;
+	int		fd;
+	char	*line;
 
 	i = 0;
 	fd = open("test.txt", O_RDONLY);
-	/*while ((line = get_next_line(NULL)))
-	{
-		printf("[%s]", line);
-		free(line);
-		i++;
-	}*/
-/*
-line = get_next_line(fd);
-printf("[%s]", line);
-line = get_next_line(fd);
-printf("[%s]", line);
-free(line);
-if (fd >= 0)
- close(fd);
-return (0);
+	line = get_next_line(fd);
+	printf("[%s]", line);
+	line = get_next_line(fd);
+	printf("[%s]", line);
+	free(line);
+	if (fd >= 0)
+		close(fd);
+	return (0);
 }
 */
