@@ -5,31 +5,33 @@
 
 int	main(void)
 {
-	int i;
-	int fd1;
-	int fd2;
-	char *line1;
-	char *line2;
+	int fd;
+	char *line;
 
-	i = 0;
-	fd1 = open("test.txt", O_RDONLY);
-	fd2 = open("test2.txt", O_RDONLY);
-	line1 = get_next_line(fd1);
-	line1 = get_next_line(fd2);
-	while (line1)
+	fd = open("test.txt", O_RDONLY);
+	while ((line = get_next_line(fd)))
 	{
-		printf("[%s]", line1);
-		free(line1);
-		line1 = get_next_line(fd1);
-
-		printf("[%s]", line2);
-		free(line2);
-		line2 = get_next_line(fd2);
+		printf("%s", line);
+		free(line);
 	}
+	close(fd);
 	return (0);
 }
 
 
+// TEST 6: stdin (leer desde teclado)
+#include <stdio.h>
+
+int	main(void)
+{
+	char *line;
+	while ((line = get_next_line(0)))
+	{
+		printf("Leído: %s", line);
+		free(line);
+	}
+	return (0);
+}
 
 
 #include <fcntl.h>
@@ -38,27 +40,34 @@ int	main(void)
 int	main(void)
 {
 	int i;
-	int fd;
+	int fd1, fd2, fd3;
 	char *line;
 
+	fd1 = open("test.txt", O_RDONLY);
+	fd2 = open("test2.txt", O_RDONLY);
+	fd3 = open("test3.txt", O_RDONLY);
+	
 	i = 0;
-	fd = open("test.txt", O_RDONLY);
-	line = get_next_line(fd);
-	while (line)
+
+	while (i < 15)
 	{
-		printf("[%s]", line);
-		free(line);
-		line = get_next_line(fd);
+
+	line = get_next_line(fd1);
+	printf("FD1: %s", line);
+	free(line);
+	
+	line = get_next_line(fd2);
+	printf("FD2: %s", line);
+	free(line);
+	
+	line = get_next_line(fd3);
+	printf("FD3: %s", line);
+	free(line);
+
 	}
-
-	printf("\n---\n---\n---\n");
-
-	while (1)
-	{
-		line = get_next_line(0);
-		printf("%s", line);
-		free(line);
-	}
-
+	
+	close(fd1);
+	close(fd2);
+	close(fd3);
 	return (0);
 }

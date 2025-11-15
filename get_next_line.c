@@ -50,7 +50,7 @@ char	*ft_strdup(const char *src)
 	return ((char *)(dest));
 }
 
-static void	*ft_extract_line(char **stash, char **line)
+static void	ft_extract_line(char **stash, char **line)
 {
 	char	*newline_pos;
 	size_t	line_len;
@@ -62,16 +62,26 @@ static void	*ft_extract_line(char **stash, char **line)
 		line_len = newline_pos - *stash + 1;
 		*line = ft_substr(*stash, 0, line_len);
 		if (!*line)
-			return (ft_frees(stash, NULL));
+		// return (ft_frees(stash, NULL));
+		{
+			ft_frees(stash, NULL);
+			return ;
+		}
 		temp = ft_strdup(newline_pos + 1);
 		if (!temp)
-			return (ft_frees(stash, *line));
+		// return (ft_frees(stash, *line));
+		{
+			ft_frees(stash, *line);
+			*line = NULL;
+			return ;
+		}
 		free(*stash);
 		*stash = temp;
-		return (NULL);
+		return ;
+		// return (NULL);
 	}
 	*line = ft_strdup(*stash);
-	return (ft_frees(stash, NULL));
+	ft_frees(stash, NULL);
 }
 
 int	ft_read_loop(char *buffer, char **stash, int fd)
@@ -103,7 +113,7 @@ char	*get_next_line(int fd)
 	char		*buffer;
 	int			bytes;
 
-	if (fd < 0 || BUFFER_SIZE <= 0 || fd >= 1024)
+	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
 	buffer = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buffer)
