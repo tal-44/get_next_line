@@ -61,15 +61,14 @@ char	*get_next_line(int fd)
 	char		*line;
 	char		*temp;
 	char		*buffer;
-	int			bytes;
-	char		*newline_pos;
-	size_t		line_len;
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || fd >= 1024)
 		return (NULL);
 	buffer = (char *)malloc((BUFFER_SIZE + 1) * sizeof(char));
 	if (!buffer)
 		return (NULL);
+		
+	int			bytes;
 	if (!stash[fd])
 	{
 		bytes = read(fd, buffer, BUFFER_SIZE);
@@ -96,9 +95,14 @@ char	*get_next_line(int fd)
 	}
 	if (!stash[fd] || stash[fd][0] == '\0')
 		return (ft_frees(stash, fd, NULL, buffer));
+
+	char		*newline_pos;
+
 	newline_pos = ft_strchr(stash[fd], '\n');
 	if (newline_pos)
 	{
+		size_t		line_len;
+
 		line_len = newline_pos - stash[fd] + 1;
 		line = ft_substr(stash[fd], 0, line_len);
 		if (!line)
