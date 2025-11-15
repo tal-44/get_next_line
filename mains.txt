@@ -1,0 +1,64 @@
+
+
+#include <fcntl.h>
+#include <stdio.h>
+
+int	main(void)
+{
+	int i;
+	int fd1;
+	int fd2;
+	char *line1;
+	char *line2;
+
+	i = 0;
+	fd1 = open("test.txt", O_RDONLY);
+	fd2 = open("test2.txt", O_RDONLY);
+	line1 = get_next_line(fd1);
+	line1 = get_next_line(fd2);
+	while (line1)
+	{
+		printf("[%s]", line1);
+		free(line1);
+		line1 = get_next_line(fd1);
+
+		printf("[%s]", line2);
+		free(line2);
+		line2 = get_next_line(fd2);
+	}
+	return (0);
+}
+
+
+
+
+#include <fcntl.h>
+#include <stdio.h>
+
+int	main(void)
+{
+	int i;
+	int fd;
+	char *line;
+
+	i = 0;
+	fd = open("test.txt", O_RDONLY);
+	line = get_next_line(fd);
+	while (line)
+	{
+		printf("[%s]", line);
+		free(line);
+		line = get_next_line(fd);
+	}
+
+	printf("\n---\n---\n---\n");
+
+	while (1)
+	{
+		line = get_next_line(0);
+		printf("%s", line);
+		free(line);
+	}
+
+	return (0);
+}
