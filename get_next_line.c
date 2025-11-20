@@ -6,7 +6,7 @@
 /*   By: jmiguele <jmiguele@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 09:37:48 by jmiguele          #+#    #+#             */
-/*   Updated: 2025/11/15 20:07:06 by jmiguele         ###   ########.fr       */
+/*   Updated: 2025/11/17 10:23:26 by jmiguele         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char	*ft_strdup(const char *src)
 	return ((char *)(dest));
 }
 
-static void	ft_extract_line(char **stash, char **line)
+static void	*ft_extract_line(char **stash, char **line)
 {
 	char	*newline_pos;
 	size_t	line_len;
@@ -62,26 +62,17 @@ static void	ft_extract_line(char **stash, char **line)
 		line_len = newline_pos - *stash + 1;
 		*line = ft_substr(*stash, 0, line_len);
 		if (!*line)
-		// return (ft_frees(stash, NULL));
-		{
-			ft_frees(stash, NULL);
-			return ;
-		}
+			return (ft_frees(stash, NULL));
 		temp = ft_strdup(newline_pos + 1);
 		if (!temp)
-		// return (ft_frees(stash, *line));
-		{
-			ft_frees(stash, *line);
-			*line = NULL;
-			return ;
-		}
+			return (ft_frees(stash, *line));
 		free(*stash);
 		*stash = temp;
-		return ;
-		// return (NULL);
+		return (NULL);
 	}
 	*line = ft_strdup(*stash);
 	ft_frees(stash, NULL);
+	return (NULL);
 }
 
 int	ft_read_loop(char *buffer, char **stash, int fd)
