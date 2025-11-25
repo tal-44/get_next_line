@@ -1,0 +1,15 @@
+# Test files
+test_gnl
+test_gnl_bonus
+test_gnl_b*
+stress_gnl
+stress_gnl_bonus
+*.txt
+stress_test_gnl.c
+test_gnl.c
+mains.txt
+
+# Compiled files
+*.o
+*.a
+*.out
